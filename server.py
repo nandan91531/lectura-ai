@@ -6,7 +6,7 @@ import os
 import json
 import shutil
 from pathlib import Path
-from fastapi import FastAPI, UploadFile, File, Form, HTTPException
+from fastapi import FastAPI, UploadFile, File, Form, HTTPException, BackgroundTasks
 from fastapi.responses import HTMLResponse, FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
@@ -47,8 +47,58 @@ app.mount("/downloads", StaticFiles(directory="downloads"), name="downloads")
 workspace_state = {
     "youtube_url": "https://youtu.be/XN3xNJvWXsc?si=3BKO-0-kD-eylrFEW",
     "media_file_path": None,
-    "chat_history": []
+    "chat_history": [],
+    "is_processing": False,
+    "processing_step": "Idle",
+    "error_message": None
 }
+
+def run_ingest_pipeline(audio_file: Optional[str], youtube_url: Optional[str], model_name: str, task: str, mistral_key: str):
+    try:
+        workspace_state["is_processing"] = True
+        workspace_state["error_message"] = None
+
+        if youtube_url and not audio_file:
+            workspace_state["processing_step"] = "Downloading YouTube Audio..."
+            audio_file = download_youtube_audio(youtube_url, output_dir="downloads")
+
+        workspace_state["processing_step"] = "Converting & Splitting Audio Chunks..."
+        wav_file = convert_to_wav(audio_file)
+        split_audio(wav_file, output_folder="downloads/audio_chunks", chunk_minutes=10)
+
+        workspace_state["processing_step"] = "Transcribing with Whisper AI..."
+        trans_segments = run_transcription(
+            chunks_dir="downloads/audio_chunks",
+            output_file="data/transcription.json",
+            model_name=model_name,
+            task=task
+        )
+
+        workspace_state["processing_step"] = "Building Vector Database..."
+        docs = create_documents(input_file="data/transcription.json", output_file="data/documents.json")
+        build_vector_store(documents_input=docs)
+
+        workspace_state["processing_step"] = "Generating AI Summary..."
+        summary_txt = generate_summary(
+            transcription_input=trans_segments,
+            output_file="data/summary.txt",
+            mistral_api_key=mistral_key
+        )
+
+        workspace_state["processing_step"] = "Extracting Questions & Study Tasks..."
+        extracted_tasks = extract_questions_and_tasks(
+            transcription_input=trans_segments,
+            mistral_api_key=mistral_key
+        )
+        with open("data/extracted_tasks.json", "w", encoding="utf-8") as f:
+            json.dump(extracted_tasks, f, indent=4)
+
+        workspace_state["is_processing"] = False
+        workspace_state["processing_step"] = "Completed"
+    except Exception as e:
+        workspace_state["is_processing"] = False
+        workspace_state["processing_step"] = "Error"
+        workspace_state["error_message"] = str(e)
 
 class IngestRequest(BaseModel):
     youtube_url: Optional[str] = None
@@ -91,11 +141,15 @@ async def get_status():
         "num_segments": num_segments,
         "youtube_url": workspace_state["youtube_url"],
         "media_file_path": workspace_state["media_file_path"],
-        "has_mistral_key": bool(os.getenv("MISTRAL_API_KEY"))
+        "has_mistral_key": bool(os.getenv("MISTRAL_API_KEY")),
+        "is_processing": workspace_state.get("is_processing", False),
+        "processing_step": workspace_state.get("processing_step", "Idle"),
+        "error_message": workspace_state.get("error_message")
     }
 
 @app.post("/api/ingest")
 async def ingest_media(
+    background_tasks: BackgroundTasks,
     youtube_url: Optional[str] = Form(None),
     model_name: Optional[str] = Form("base"),
     task: Optional[str] = Form("transcribe"),
@@ -109,7 +163,11 @@ async def ingest_media(
     if not mistral_key:
         raise HTTPException(status_code=400, detail="Mistral API Key is required.")
 
+    if workspace_state.get("is_processing"):
+        raise HTTPException(status_code=400, detail="Processing is already running in background. Please wait.")
+
     try:
+        audio_file = None
         if file:
             save_path = os.path.join("downloads", file.filename)
             with open(save_path, "wb") as buffer:
@@ -120,46 +178,27 @@ async def ingest_media(
         elif youtube_url:
             workspace_state["youtube_url"] = youtube_url
             workspace_state["media_file_path"] = None
-            audio_file = download_youtube_audio(youtube_url, output_dir="downloads")
         else:
             raise HTTPException(status_code=400, detail="Please provide a YouTube URL or upload a file.")
 
-        wav_file = convert_to_wav(audio_file)
-        split_audio(wav_file, output_folder="downloads/audio_chunks", chunk_minutes=10)
-
-        trans_segments = run_transcription(
-            chunks_dir="downloads/audio_chunks",
-            output_file="data/transcription.json",
+        background_tasks.add_task(
+            run_ingest_pipeline,
+            audio_file=audio_file,
+            youtube_url=youtube_url if not audio_file else None,
             model_name=model_name,
-            task=task
+            task=task,
+            mistral_key=mistral_key
         )
-
-        docs = create_documents(input_file="data/transcription.json", output_file="data/documents.json")
-        build_vector_store(documents_input=docs)
-
-        summary_txt = generate_summary(
-            transcription_input=trans_segments,
-            output_file="data/summary.txt",
-            mistral_api_key=mistral_key
-        )
-
-        extracted_tasks = extract_questions_and_tasks(
-            transcription_input=trans_segments,
-            mistral_api_key=mistral_key
-        )
-        with open("data/extracted_tasks.json", "w", encoding="utf-8") as f:
-            json.dump(extracted_tasks, f, indent=4)
 
         return {
-            "status": "success",
-            "message": "Processing completed successfully!",
-            "summary": summary_txt,
-            "tasks": extracted_tasks,
-            "segments_count": len(trans_segments),
+            "status": "processing",
+            "message": "Processing started in background!",
             "youtube_url": workspace_state["youtube_url"],
             "media_file_path": workspace_state["media_file_path"]
         }
 
+    except HTTPException as he:
+        raise he
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 

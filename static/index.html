@@ -720,6 +720,8 @@
             }
         }
 
+        let pollingTimer = null;
+
         async function processVideo() {
             const url = document.getElementById('videoUrlInput').value;
             const fileInput = document.getElementById('fileInput').files[0];
@@ -727,8 +729,9 @@
             const status = document.getElementById('systemStatus');
 
             btn.disabled = true;
-            btn.innerHTML = `<i data-lucide="loader" class="spin"></i> Processing...`;
-            status.innerText = 'Processing Video & Indexing...';
+            btn.innerHTML = `<i data-lucide="loader" class="spin"></i> Starting...`;
+            status.innerText = 'Starting Background Processing...';
+            lucide.createIcons();
 
             const formData = new FormData();
             if (fileInput) {
@@ -742,23 +745,61 @@
                 const data = await res.json();
                 
                 if (res.ok) {
-                    status.innerText = 'Indexed & Ready';
-                    alert('Processing Complete!');
                     if (data.youtube_url || data.media_file_path) {
                         updateVideoPlayer(data.youtube_url, data.media_file_path);
                     }
-                    loadStatusAndData();
+                    pollProcessingStatus();
                 } else {
                     alert('Error: ' + data.detail);
+                    btn.disabled = false;
+                    btn.innerHTML = `<i data-lucide="zap"></i> Process`;
+                    lucide.createIcons();
                 }
             } catch (err) {
                 console.error("Ingest Error:", err);
-                alert('Connection Error: ' + (err.message || 'Server timeout or network connection failed. Check server logs.'));
-            } finally {
+                alert('Connection Error: ' + (err.message || 'Server timeout or network connection failed.'));
                 btn.disabled = false;
                 btn.innerHTML = `<i data-lucide="zap"></i> Process`;
                 lucide.createIcons();
             }
+        }
+
+        function pollProcessingStatus() {
+            const btn = document.getElementById('processBtn');
+            const status = document.getElementById('systemStatus');
+
+            if (pollingTimer) clearInterval(pollingTimer);
+
+            pollingTimer = setInterval(async () => {
+                try {
+                    const res = await fetch('/api/status');
+                    const data = await res.json();
+
+                    if (data.is_processing) {
+                        status.innerText = data.processing_step || 'Processing Video...';
+                        btn.disabled = true;
+                        btn.innerHTML = `<i data-lucide="loader" class="spin"></i> Processing...`;
+                        lucide.createIcons();
+                    } else if (data.processing_step === 'Completed') {
+                        clearInterval(pollingTimer);
+                        status.innerText = 'Indexed & Ready';
+                        btn.disabled = false;
+                        btn.innerHTML = `<i data-lucide="zap"></i> Process`;
+                        lucide.createIcons();
+                        loadStatusAndData();
+                        alert('Processing Complete!');
+                    } else if (data.processing_step === 'Error') {
+                        clearInterval(pollingTimer);
+                        status.innerText = 'Processing Error';
+                        btn.disabled = false;
+                        btn.innerHTML = `<i data-lucide="zap"></i> Process`;
+                        lucide.createIcons();
+                        alert('Error during processing: ' + (data.error_message || 'Unknown error'));
+                    }
+                } catch (err) {
+                    console.error("Polling status error:", err);
+                }
+            }, 2500);
         }
 
         async function reextractTasks() {
