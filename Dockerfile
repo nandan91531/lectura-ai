@@ -1,4 +1,4 @@
-FROM python:3.10-slim
+FROM python:3.11-slim
 
 # Install system packages (ffmpeg is required for Whisper & Pydub)
 RUN apt-get update && apt-get install -y \
