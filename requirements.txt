@@ -1,0 +1,31 @@
+# UI
+streamlit>=1.38.0
+
+# Audio input (YouTube URLs / uploaded files)
+yt-dlp>=2024.8.6
+pydub>=0.25.1
+ffmpeg-python>=0.2.0
+
+# Local transcription + Hindi -> English translation
+openai-whisper>=20231117
+torch>=2.2.0
+
+# LangChain (LCEL) + Mistral free API
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-community>=0.3.0
+langchain-mistralai>=0.2.0
+langchain-text-splitters>=0.3.0
+
+# RAG: ChromaDB + HuggingFace embeddings
+chromadb>=0.5.5
+langchain-chroma>=0.1.4
+langchain-huggingface>=0.1.0
+sentence-transformers>=3.0.0
+
+# Export (PDF / TXT)
+fpdf2>=2.8.0
+
+# Config / utilities
+python-dotenv>=1.0.1
+pydantic>=2.8.0

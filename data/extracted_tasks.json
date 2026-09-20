@@ -1,0 +1,82 @@
+[
+    {
+        "timestamp": "02:12",
+        "type": "Question",
+        "task": "Did sales go up or down?"
+    },
+    {
+        "timestamp": "02:33",
+        "type": "Question",
+        "task": "Why did something happen? (e.g., why did sales go up or down?)"
+    },
+    {
+        "timestamp": "02:53",
+        "type": "Question",
+        "task": "What will our sales performance be next quarter?"
+    },
+    {
+        "timestamp": "03:16",
+        "type": "Question",
+        "task": "What do I need to do to improve sales by 10%?"
+    },
+    {
+        "timestamp": "03:50",
+        "type": "Key Discussion",
+        "task": "Why is business understanding critical before starting a data science initiative?"
+    },
+    {
+        "timestamp": "04:02",
+        "type": "Key Discussion",
+        "task": "How does domain expertise from business analysts contribute to defining the right questions in data science?"
+    },
+    {
+        "timestamp": "04:16",
+        "type": "Key Discussion",
+        "task": "What are the key steps in the data science life cycle, and why is collaboration across roles essential?"
+    },
+    {
+        "timestamp": "04:23",
+        "type": "Key Discussion",
+        "task": "Why is data cleaning necessary, and what common issues might data contain?"
+    },
+    {
+        "timestamp": "05:05",
+        "type": "Key Discussion",
+        "task": "How do exploratory data analysis and advanced analytics (e.g., machine learning) differ in answering business questions?"
+    },
+    {
+        "timestamp": "05:49",
+        "type": "Key Discussion",
+        "task": "What roles (e.g., business analyst, data engineer, data scientist) are involved in the data science lifecycle, and how do they overlap?"
+    },
+    {
+        "timestamp": "07:45",
+        "type": "Self-Assessment",
+        "task": "Explain how descriptive analytics answers the question: 'What is happening in my business?' Provide an example."
+    },
+    {
+        "timestamp": "07:46",
+        "type": "Self-Assessment",
+        "task": "Compare and contrast diagnostic and predictive analytics in terms of their purpose and use cases."
+    },
+    {
+        "timestamp": "07:47",
+        "type": "Self-Assessment",
+        "task": "Describe the role of data cleaning in the data science process and why it is often overlooked."
+    },
+    {
+        "timestamp": "07:48",
+        "type": "Self-Assessment",
+        "task": "How would you apply prescriptive analytics to a real-world business scenario (e.g., marketing, operations) to recommend actions?"
+    },
+    {
+        "timestamp": "07:49",
+        "type": "Self-Assessment",
+        "task": "List three roles in a data science team and explain how each contributes to the data science lifecycle."
+    },
+    {
+        "timestamp": "07:50",
+        "type": "Self-Assessment",
+        "task": "Why is collaboration across disciplines (computer science, mathematics, business) crucial for effective data science?"
+    }
+]

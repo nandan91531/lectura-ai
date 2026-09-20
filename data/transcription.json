@@ -1,0 +1,412 @@
+[
+    {
+        "start": 0.0,
+        "end": 3.48,
+        "text": "Let's talk about data science and some of the other related terms you may have heard,"
+    },
+    {
+        "start": 3.48,
+        "end": 8.64,
+        "text": "such as predictive analytics, machine learning, advanced analytics, and others."
+    },
+    {
+        "start": 8.64,
+        "end": 11.96,
+        "text": "So let's start with the textbook definition of data science."
+    },
+    {
+        "start": 11.96,
+        "end": 21.36,
+        "text": "So data science is the field of study that involves extracting knowledge and"
+    },
+    {
+        "start": 21.36,
+        "end": 38.4,
+        "text": "insights from noisy data and then turning those insights into actions that our business"
+    },
+    {
+        "start": 38.4,
+        "end": 40.28,
+        "text": "or organization can take."
+    },
+    {
+        "start": 40.28,
+        "end": 45.92,
+        "text": "Okay, so let's dig into it a little bit more and discuss what are the different areas that"
+    },
+    {
+        "start": 45.92,
+        "end": 48.04,
+        "text": "are covered by data science."
+    },
+    {
+        "start": 48.04,
+        "end": 53.24,
+        "text": "So really data science is the intersection between three different disciplines."
+    },
+    {
+        "start": 53.24,
+        "end": 67.16,
+        "text": "We start with computer science, but then we also cover the area of mathematics and then"
+    },
+    {
+        "start": 67.16,
+        "end": 77.6,
+        "text": "what I think is the most important is business expertise."
+    },
+    {
+        "start": 77.6,
+        "end": 83.48,
+        "text": "So the intersection of these three disciplines is data science and true data science initiatives"
+    },
+    {
+        "start": 83.48,
+        "end": 88.0,
+        "text": "involve collaboration across all these three different areas."
+    },
+    {
+        "start": 88.0,
+        "end": 93.84,
+        "text": "Okay, so now let's touch on the different types of data science that you can do."
+    },
+    {
+        "start": 93.84,
+        "end": 98.96,
+        "text": "Now what we need to understand here is that we have different data science methods for"
+    },
+    {
+        "start": 98.96,
+        "end": 102.64,
+        "text": "different questions that we might ask in an organization."
+    },
+    {
+        "start": 102.64,
+        "end": 107.8,
+        "text": "And these questions can vary by complexity and the value that we get out of them."
+    },
+    {
+        "start": 107.8,
+        "end": 118.76,
+        "text": "So let's chart them here by complexity and value."
+    },
+    {
+        "start": 118.76,
+        "end": 129.24,
+        "text": "Okay, so the first one that we have here is descriptive analytics."
+    },
+    {
+        "start": 129.24,
+        "end": 133.12,
+        "text": "So this is really about what is happening in my business, right?"
+    },
+    {
+        "start": 133.12,
+        "end": 137.0,
+        "text": "And it involves having accurate data collection to make sure that we know what's happening."
+    },
+    {
+        "start": 137.0,
+        "end": 142.96,
+        "text": "So a good question we could ask here is, well, did sales go up or down?"
+    },
+    {
+        "start": 142.96,
+        "end": 152.0,
+        "text": "The next level is diagnostic analytics."
+    },
+    {
+        "start": 152.0,
+        "end": 154.68,
+        "text": "And this is more about why did something happen?"
+    },
+    {
+        "start": 154.68,
+        "end": 157.04,
+        "text": "So why did sales go up or down?"
+    },
+    {
+        "start": 157.04,
+        "end": 161.84,
+        "text": "And it involves drilling down to the root cause of our problem."
+    },
+    {
+        "start": 161.84,
+        "end": 170.68,
+        "text": "Now the next one that we have is predictive analytics."
+    },
+    {
+        "start": 170.68,
+        "end": 174.4,
+        "text": "So this is about what is likely to happen next, right?"
+    },
+    {
+        "start": 174.4,
+        "end": 178.4,
+        "text": "So what will our sales performance be next quarter?"
+    },
+    {
+        "start": 178.4,
+        "end": 185.64,
+        "text": "And it involves using historical patterns in our data to predict outcomes in the future."
+    },
+    {
+        "start": 185.64,
+        "end": 194.96,
+        "text": "And then finally, we have prescriptive analytics."
+    },
+    {
+        "start": 194.96,
+        "end": 197.32,
+        "text": "So this is about what do I need to do next?"
+    },
+    {
+        "start": 197.32,
+        "end": 201.2,
+        "text": "What is the recommended best action for a particular outcome?"
+    },
+    {
+        "start": 201.2,
+        "end": 207.36,
+        "text": "So a question we could ask here is, what do I need to do to improve sales by 10%, right?"
+    },
+    {
+        "start": 207.36,
+        "end": 213.44,
+        "text": "Okay, so now we can talk about how data science is done and who actually does it."
+    },
+    {
+        "start": 213.44,
+        "end": 217.32,
+        "text": "So let's look at the data science life cycle."
+    },
+    {
+        "start": 217.32,
+        "end": 230.0,
+        "text": "And the first thing that we always must start with is business understanding."
+    },
+    {
+        "start": 230.0,
+        "end": 234.56,
+        "text": "So this is really critical to make sure that we're asking the right question before we"
+    },
+    {
+        "start": 234.56,
+        "end": 238.72,
+        "text": "go down a lengthy data science initiative."
+    },
+    {
+        "start": 238.72,
+        "end": 243.6,
+        "text": "And this is where you can see that having the business expertise and the domain expertise"
+    },
+    {
+        "start": 243.6,
+        "end": 247.32,
+        "text": "can be incredibly critical to make sure that we're asking the right questions."
+    },
+    {
+        "start": 247.32,
+        "end": 257.24,
+        "text": "Okay, so once we've defined that, we can move on to data mining."
+    },
+    {
+        "start": 257.24,
+        "end": 262.28,
+        "text": "So this is the process of actually going out into our data landscape and procuring the"
+    },
+    {
+        "start": 262.28,
+        "end": 264.56,
+        "text": "data that we need for our analysis."
+    },
+    {
+        "start": 264.56,
+        "end": 274.36,
+        "text": "So once we've done that, we can move on to data cleaning."
+    },
+    {
+        "start": 274.36,
+        "end": 281.2,
+        "text": "So the reality of the marketplace is that once we, when we find data, it's probably"
+    },
+    {
+        "start": 281.2,
+        "end": 287.24,
+        "text": "not in the best format that we need it in and it probably has some issues with it, right?"
+    },
+    {
+        "start": 287.24,
+        "end": 292.12,
+        "text": "It might have rows that have missing values, it might have duplicates in it."
+    },
+    {
+        "start": 292.12,
+        "end": 297.04,
+        "text": "So there's some preparation and cleaning that we have to do before it's ready for our analysis."
+    },
+    {
+        "start": 297.04,
+        "end": 306.12,
+        "text": "So once we've done that cleansing, we can move on to exploration."
+    },
+    {
+        "start": 306.12,
+        "end": 314.32,
+        "text": "Okay, so this is the part of the process that allows us to use different analytical tools"
+    },
+    {
+        "start": 314.32,
+        "end": 320.64,
+        "text": "that can start helping us answer some of the types of questions that I mentioned here earlier."
+    },
+    {
+        "start": 320.64,
+        "end": 324.68,
+        "text": "And if we actually want to get into some of these higher value questions like predictive"
+    },
+    {
+        "start": 324.68,
+        "end": 330.84,
+        "text": "and prescriptive, then we must start using advanced analytical tools such as machine"
+    },
+    {
+        "start": 330.84,
+        "end": 336.12,
+        "text": "learning tools that leverage massive amounts of computing power and massive amounts of"
+    },
+    {
+        "start": 336.12,
+        "end": 343.4,
+        "text": "high quality data to make predictions and prescribe actions for the future."
+    },
+    {
+        "start": 343.4,
+        "end": 350.32,
+        "text": "Now once we've done our exploration and perhaps our advanced analytics, what do we do next?"
+    },
+    {
+        "start": 350.52,
+        "end": 359.0,
+        "text": "Well, we need to visualize our insights and outcomes of our analysis."
+    },
+    {
+        "start": 359.0,
+        "end": 364.64,
+        "text": "Okay, now I want to quickly touch on who does what in this life cycle."
+    },
+    {
+        "start": 364.64,
+        "end": 373.92,
+        "text": "So in an organization, you may have roles like a business analyst, you might have data engineers,"
+    },
+    {
+        "start": 373.92,
+        "end": 378.52,
+        "text": "and then you might have data scientists."
+    },
+    {
+        "start": 378.52,
+        "end": 384.0,
+        "text": "So business analysts are obviously involved in formulating the questions."
+    },
+    {
+        "start": 384.0,
+        "end": 388.16,
+        "text": "They have the domain expertise, they can help with the business understanding."
+    },
+    {
+        "start": 388.16,
+        "end": 393.88,
+        "text": "But they're also involved with visualizing our insights in a way that's useful for the"
+    },
+    {
+        "start": 393.88,
+        "end": 395.88,
+        "text": "business, right?"
+    },
+    {
+        "start": 395.88,
+        "end": 398.16,
+        "text": "And then we have folks like data engineering folks."
+    },
+    {
+        "start": 398.16,
+        "end": 405.16,
+        "text": "So these are the people that can help us find the data, clean the data, and then also help"
+    },
+    {
+        "start": 405.16,
+        "end": 408.28,
+        "text": "with some of the exploration."
+    },
+    {
+        "start": 408.28,
+        "end": 410.88,
+        "text": "Next we move on to our data scientists."
+    },
+    {
+        "start": 410.88,
+        "end": 415.08,
+        "text": "So these are the people that will really help us with the exploration, they'll help us with"
+    },
+    {
+        "start": 415.08,
+        "end": 421.92,
+        "text": "the advanced machine learning techniques, and they'll also assist in the visualization."
+    },
+    {
+        "start": 421.92,
+        "end": 427.4,
+        "text": "So you can see there's some overlap between the roles, and that's why it's critical to"
+    },
+    {
+        "start": 427.4,
+        "end": 432.12,
+        "text": "have collaboration across these roles."
+    },
+    {
+        "start": 432.12,
+        "end": 436.52,
+        "text": "And what you also start seeing nowadays in the marketplace is that sometimes business"
+    },
+    {
+        "start": 436.6,
+        "end": 440.44,
+        "text": "analysts have to do some machine learning, they have to help out with exploration."
+    },
+    {
+        "start": 440.44,
+        "end": 444.36,
+        "text": "Data scientists sometimes need to go and find the data on their own."
+    },
+    {
+        "start": 444.36,
+        "end": 450.88,
+        "text": "So there's a lot of overlap and these different roles must collaborate with each other."
+    },
+    {
+        "start": 450.88,
+        "end": 456.96,
+        "text": "Okay, so I hope you can see now how the data science lifecycle can help us take noisy data,"
+    },
+    {
+        "start": 456.96,
+        "end": 462.08,
+        "text": "turn it into knowledge and insights, and then turn it into meaningful action for our business."
+    },
+    {
+        "start": 462.08,
+        "end": 463.36,
+        "text": "Thank you."
+    },
+    {
+        "start": 463.36,
+        "end": 466.04,
+        "text": "If you have questions, please drop us a line below."
+    },
+    {
+        "start": 466.04,
+        "end": 469.68,
+        "text": "And if you want to see more videos like this in the future, please like and subscribe."
+    }
+]
