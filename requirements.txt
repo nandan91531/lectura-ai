@@ -1,31 +1,33 @@
-# UI
-streamlit>=1.38.0
+# FastAPI Backend Server & Web API
+fastapi>=0.110.0
+uvicorn>=0.28.0
+python-multipart>=0.0.9
 
-# Audio input (YouTube URLs / uploaded files)
+# Audio Input & Processing (YouTube URLs / uploaded files)
 yt-dlp>=2024.8.6
 pydub>=0.25.1
 ffmpeg-python>=0.2.0
 
-# Local transcription + Hindi -> English translation
+# Local Whisper Transcription & PyTorch
 openai-whisper>=20231117
 torch>=2.2.0
 
-# LangChain (LCEL) + Mistral free API
+# LangChain & Mistral AI Integration
 langchain>=0.3.0
 langchain-core>=0.3.0
 langchain-community>=0.3.0
 langchain-mistralai>=0.2.0
 langchain-text-splitters>=0.3.0
 
-# RAG: ChromaDB + HuggingFace embeddings
+# RAG Engine: ChromaDB & HuggingFace Embeddings
 chromadb>=0.5.5
 langchain-chroma>=0.1.4
 langchain-huggingface>=0.1.0
 sentence-transformers>=3.0.0
 
-# Export (PDF / TXT)
+# Export Notes (PDF / TXT)
 fpdf2>=2.8.0
 
-# Config / utilities
+# Configuration & Data Validation
 python-dotenv>=1.0.1
 pydantic>=2.8.0
