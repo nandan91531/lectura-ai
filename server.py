@@ -97,7 +97,7 @@ async def get_status():
 @app.post("/api/ingest")
 async def ingest_media(
     youtube_url: Optional[str] = Form(None),
-    model_name: Optional[str] = Form("small"),
+    model_name: Optional[str] = Form("base"),
     task: Optional[str] = Form("transcribe"),
     api_key: Optional[str] = Form(None),
     file: Optional[UploadFile] = File(None)

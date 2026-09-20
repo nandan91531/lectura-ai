@@ -752,7 +752,8 @@
                     alert('Error: ' + data.detail);
                 }
             } catch (err) {
-                alert('Failed to connect to backend.');
+                console.error("Ingest Error:", err);
+                alert('Connection Error: ' + (err.message || 'Server timeout or network connection failed. Check server logs.'));
             } finally {
                 btn.disabled = false;
                 btn.innerHTML = `<i data-lucide="zap"></i> Process`;
