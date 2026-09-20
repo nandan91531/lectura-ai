@@ -4,6 +4,7 @@ streamlit>=1.38.0
 # Audio input (YouTube URLs / uploaded files)
 yt-dlp>=2024.8.6
 pydub>=0.25.1
+pyaudioop>=2.0.0
 ffmpeg-python>=0.2.0
 
 # Local transcription + Hindi -> English translation
