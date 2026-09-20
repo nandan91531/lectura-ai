@@ -52,7 +52,7 @@ workspace_state = {
 
 class IngestRequest(BaseModel):
     youtube_url: Optional[str] = None
-    model_name: Optional[str] = "small"
+    model_name: Optional[str] = "base"
     task: Optional[str] = "transcribe"
     api_key: Optional[str] = None
 

@@ -13,6 +13,9 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt uvicorn fastapi python-multipart
 
+# Pre-download Whisper base model so runtime transcription is instant
+RUN python -c "import whisper; whisper.load_model('base')"
+
 # Copy project code
 COPY . .
 

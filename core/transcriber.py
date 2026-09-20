@@ -10,7 +10,7 @@ import whisper
 def run_transcription(
     chunks_dir="downloads/audio_chunks",
     output_file="data/transcription.json",
-    model_name="small",
+    model_name="base",
     task="transcribe",
     language=None,
     progress_callback=None
