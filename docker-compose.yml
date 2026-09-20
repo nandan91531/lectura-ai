@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  lectura-ai:
+    build: .
+    container_name: lectura-ai
+    ports:
+      - "8000:8000"
+    environment:
+      - MISTRAL_API_KEY=${MISTRAL_API_KEY}
+    volumes:
+      - ./data:/app/data
+      - ./downloads:/app/downloads
+    restart: unless-stopped

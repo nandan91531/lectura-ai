@@ -26,5 +26,6 @@ ENV PYTHONUNBUFFERED=1
 EXPOSE 8000
 EXPOSE 8501
 
-# Default startup command (FastAPI server hosting Web UI)
-CMD ["uvicorn", "server:app", "--host", "0.0.0.0", "--port", "8000"]
+# Default startup command (FastAPI server hosting Web UI) - dynamic port for PaaS support
+CMD ["sh", "-c", "uvicorn server:app --host 0.0.0.0 --port ${PORT:-8000}"]
+
