@@ -1,772 +1,237 @@
 [
     {
         "start": 0.0,
-        "end": 6.2,
-        "text": "If you want to become an AI engineer, well, you might not need a computer science degree,"
+        "end": 5.76,
+        "text": "Do you know how JavaScript works and how the code is executed? Is JavaScript synch an us or"
     },
     {
-        "start": 6.2,
-        "end": 10.56,
-        "text": "but what you do need are the right skills and to understand the fundamentals."
+        "start": 5.76,
+        "end": 12.24,
+        "text": "asynchronous? Is JavaScript single threaded or is it multi threaded? Don't worry, we'll cover"
     },
     {
-        "start": 10.56,
-        "end": 16.6,
-        "text": "And today, I'm going to break down what an AI engineer actually is, the skill stack that"
+        "start": 12.24,
+        "end": 17.92,
+        "text": "everything. Just keep watching namaste JavaScript. Before I start explaining, listen to this"
     },
     {
-        "start": 16.6,
-        "end": 22.68,
-        "text": "you need to learn, and three projects that will help demonstrate your skills to potential"
+        "start": 17.92,
+        "end": 25.44,
+        "text": "first core fundamental. It is everything in JavaScript happens inside the execution context."
     },
     {
-        "start": 22.68,
-        "end": 23.68,
-        "text": "employers."
+        "start": 25.44,
+        "end": 31.6,
+        "text": "I repeat, everything in JavaScript happens inside the execution context. You can assume this"
     },
     {
-        "start": 23.68,
-        "end": 28.0,
-        "text": "And a few years ago, the path in a tech was pretty straightforward, right?"
+        "start": 31.6,
+        "end": 37.12,
+        "text": "execution context to be a big box or a container in which whole JavaScript code is executed."
     },
     {
-        "start": 28.0,
-        "end": 33.84,
-        "text": "You would get a degree, go do some internships, grind coding challenges, and hope for a call"
+        "start": 37.12,
+        "end": 42.16,
+        "text": "So let us now see how this execution context actually looks like. So follow along with me."
     },
     {
-        "start": 33.84,
-        "end": 36.0,
-        "text": "back from the job employer, right?"
+        "start": 42.8,
+        "end": 46.88,
+        "text": "So now watch this carefully. So execution in context is like a big box"
     },
     {
-        "start": 36.0,
-        "end": 38.4,
-        "text": "But things have changed recently."
+        "start": 47.84,
+        "end": 57.2,
+        "text": "and it has two components in it. The first component is also known as the memory component."
     },
     {
-        "start": 38.4,
-        "end": 44.2,
-        "text": "AI coding tools have made it easy to generate code, which means the code itself isn't the"
+        "start": 57.2,
+        "end": 62.48,
+        "text": "So this is the place where all the variables and functions are stored as a key value pairs."
     },
     {
-        "start": 44.2,
-        "end": 47.88,
-        "text": "hard part anymore, but the hard part is judgment."
+        "start": 62.48,
+        "end": 67.68,
+        "text": "Something like this. So key value, suppose we have a variable A which is equivalent to 10,"
     },
     {
-        "start": 47.88,
-        "end": 56.4,
-        "text": "So being able to make the right decisions for situations like how to structure applications,"
+        "start": 67.68,
+        "end": 72.64,
+        "text": "it will be stored over here and similarly functions are also stored over here in this memory"
     },
     {
-        "start": 56.4,
-        "end": 62.64,
-        "text": "knowing what to build, and specifically why one approach would be another."
+        "start": 73.44,
+        "end": 78.72,
+        "text": "component. There is also a heavy word for this memory component and this memory component is"
     },
     {
-        "start": 62.64,
-        "end": 67.64,
-        "text": "And that's something that a class can't always teach you, but you can definitely learn by"
+        "start": 78.72,
+        "end": 85.28,
+        "text": "also known as variable environment. Okay, so listen to this carefully variable environment."
     },
     {
-        "start": 67.64,
-        "end": 68.72,
-        "text": "building."
+        "start": 88.8,
+        "end": 94.08,
+        "text": "So it's sort of an environment in which all these variables and functions are stored as the key"
     },
     {
-        "start": 68.72,
-        "end": 74.24,
-        "text": "So the question is, what do you actually need to learn to become an AI engineer, and how"
+        "start": 94.08,
+        "end": 99.84,
+        "text": "value pairs. Something like that. The second component of this execution context is the code"
     },
     {
-        "start": 74.24,
-        "end": 76.8,
-        "text": "can you demonstrate that to employers?"
+        "start": 99.92,
+        "end": 106.56,
+        "text": "component. So here is it. So this is the place where code is executed one line at a time."
     },
     {
-        "start": 76.8,
-        "end": 79.12,
-        "text": "First off, the term is quite new."
+        "start": 106.56,
+        "end": 111.68,
+        "text": "So this is the place. So just like this memory component is also known as the variable environment."
     },
     {
-        "start": 79.12,
-        "end": 83.44,
-        "text": "An AI engineer is not a machine learning researcher."
+        "start": 111.68,
+        "end": 117.6,
+        "text": "There is also a heavy word for this code component. It is also known as thread of execution."
     },
     {
-        "start": 83.44,
-        "end": 87.76,
-        "text": "It's a researcher who trains foundational models from scratch."
+        "start": 117.6,
+        "end": 124.96,
+        "text": "I repeat thread of execution. So this is also known as the thread of execution. So this thread of"
     },
     {
-        "start": 87.76,
-        "end": 93.16,
-        "text": "They publish papers about those models and the new architectures that they're working"
+        "start": 124.96,
+        "end": 130.64,
+        "text": "execution is just like a thread in which the whole code is executed one line at a time."
     },
     {
-        "start": 93.16,
-        "end": 94.36,
-        "text": "on."
+        "start": 130.64,
+        "end": 136.0,
+        "text": "So here's the time for another core fundamental. Listen to this really very carefully. So JavaScript"
     },
     {
-        "start": 94.36,
-        "end": 100.44,
-        "text": "And this position typically requires deep math and usually an advanced degree."
+        "start": 136.0,
+        "end": 141.52,
+        "text": "is a synchronous single threaded language. So this is really very important. JavaScript is a"
     },
     {
-        "start": 100.44,
-        "end": 104.6,
-        "text": "On the other hand, an AI engineer is different."
+        "start": 141.52,
+        "end": 148.0,
+        "text": "synchronous single threaded language. So let us see what does this means. So when I say single"
     },
     {
-        "start": 104.6,
-        "end": 107.96,
-        "text": "You're building with models that already exist."
+        "start": 148.0,
+        "end": 154.16,
+        "text": "threaded, that means JavaScript can only execute one command at a time. And when I say synchronous"
     },
     {
-        "start": 107.96,
-        "end": 112.84,
-        "text": "And for example, those could be the models like Frontier or open source that have been"
+        "start": 154.16,
+        "end": 160.48,
+        "text": "single threaded, that means that JavaScript can only execute one command at a time and in a"
     },
     {
-        "start": 112.84,
-        "end": 118.3,
-        "text": "developed by those researchers, but you take that model and wire it into a system that"
+        "start": 160.48,
+        "end": 167.36,
+        "text": "specific order. Okay. So that means that it can only go to the next line once the current line"
     },
     {
-        "start": 118.3,
-        "end": 120.04,
-        "text": "does useful work."
+        "start": 167.36,
+        "end": 172.72,
+        "text": "has been finished executing. So that means synchronous single threaded language. So let's revise"
     },
     {
-        "start": 120.04,
-        "end": 123.28,
-        "text": "So for example, that means connecting a model to data."
+        "start": 172.72,
+        "end": 179.2,
+        "text": "once again. JavaScript is a synchronous single threaded language. I know that you must be thinking"
     },
     {
-        "start": 123.28,
-        "end": 130.0,
-        "text": "That means perhaps giving it access to tools and outside external information, giving it"
+        "start": 179.92,
+        "end": 185.6,
+        "text": "we have heard of something known as ajx, right? Where a stands for asynchronous. So what does that"
     },
     {
-        "start": 130.0,
-        "end": 137.48,
-        "text": "memory loops and guard rails, and many other capabilities that can turn a model into a solution"
+        "start": 185.6,
+        "end": 191.04,
+        "text": "means? Don't worry. We'll cover everything. We'll be going slowly and we'll be understanding each"
     },
     {
-        "start": 137.48,
-        "end": 139.4,
-        "text": "that someone can actually use."
+        "start": 191.04,
+        "end": 196.64,
+        "text": "of these concepts properly as we go ahead. So for now, just remember that JavaScript is not"
     },
     {
-        "start": 139.4,
-        "end": 145.32,
-        "text": "So if ML researchers are the ones building the engine, then AI engineers are the ones"
+        "start": 196.64,
+        "end": 202.08,
+        "text": "possible without this beautiful execution context. So let's just quickly recap what we studied."
     },
     {
-        "start": 145.32,
-        "end": 146.6,
-        "text": "building the car."
+        "start": 202.08,
+        "end": 206.72,
+        "text": "This whole thing which you can see is the execution context. The first component is known as the"
     },
     {
-        "start": 146.6,
-        "end": 151.8,
-        "text": "And right now, with the influx of models, we desperately need more folks who can build"
+        "start": 206.72,
+        "end": 211.68,
+        "text": "memory component. The second component is known as the code component. Memory component contains"
     },
     {
-        "start": 151.8,
-        "end": 155.28,
-        "text": "these cars and AI solutions for organizations."
+        "start": 211.68,
+        "end": 217.28,
+        "text": "variables and functions as the key value pairs. And this code component is the place where whole"
     },
     {
-        "start": 155.28,
-        "end": 159.88,
-        "text": "Now with the foundations, though, I typically think of this as three tiers."
+        "start": 217.28,
+        "end": 222.32,
+        "text": "JavaScript code is executed. Memory component is also known as the variable environment. And the"
     },
     {
-        "start": 159.88,
-        "end": 161.52,
-        "text": "And this order really matters."
+        "start": 222.32,
+        "end": 229.04,
+        "text": "code component is also known as the thread of execution. I know these are a lot of jargons."
     },
     {
-        "start": 161.52,
-        "end": 163.28,
-        "text": "I'll explain why."
+        "start": 229.04,
+        "end": 233.92,
+        "text": "And trust me, these things are really, very important and nobody teaches them. But I am here on"
     },
     {
-        "start": 163.28,
-        "end": 170.32,
-        "text": "Because with this foundation at the bottom, what people sometimes do is they skip the"
+        "start": 233.92,
+        "end": 238.72,
+        "text": "a mission to make you fall in love with JavaScript. And don't worry. Continue along with me and"
     },
     {
-        "start": 170.32,
-        "end": 175.72,
-        "text": "foundation here and they go straight into building agents or deploying them before they"
+        "start": 238.72,
+        "end": 243.36,
+        "text": "we'll be covering everything in deep. So in the next video, I'll actually walk you through a real"
     },
     {
-        "start": 175.72,
-        "end": 180.04,
-        "text": "can handle data and understand the intricacies of infrastructure."
+        "start": 243.36,
+        "end": 248.56,
+        "text": "JavaScript program. We will see how this whole beautiful execution context is created,"
     },
     {
-        "start": 180.04,
-        "end": 183.6,
-        "text": "So they spend a lot of time relearning the basics."
+        "start": 248.56,
+        "end": 253.76,
+        "text": "how this memory section is created, how this code is executed inside this code component. Everything"
     },
     {
-        "start": 183.6,
-        "end": 185.68,
-        "text": "So tier one is your foundations."
+        "start": 253.76,
+        "end": 258.48,
+        "text": "will cover in the next video. But before jumping on to that video, you have to do two things."
     },
     {
-        "start": 185.68,
-        "end": 190.32,
-        "text": "This is the stuff that's not specific to AI, but you absolutely can't build without it."
+        "start": 258.48,
+        "end": 262.96,
+        "text": "First is to like this video. It gives me a huge motivation. And the second thing is to come"
     },
     {
-        "start": 190.32,
-        "end": 193.44,
-        "text": "For example, using Python."
+        "start": 262.96,
+        "end": 268.0,
+        "text": "in down what you liked about this video and are you feeling excited or not? So that's all in this"
     },
     {
-        "start": 193.44,
-        "end": 197.88,
-        "text": "So Python, you don't have to be a wizard, but you just have to be fluent enough to read"
-    },
-    {
-        "start": 197.88,
-        "end": 201.96,
-        "text": "code and understand what your AI agent is writing."
-    },
-    {
-        "start": 201.96,
-        "end": 207.56,
-        "text": "Because a lot of machine learning libraries and AI packages will be using Python underneath"
-    },
-    {
-        "start": 207.56,
-        "end": 210.68,
-        "text": "the hood, for example, PyTorch and TensorFlow."
-    },
-    {
-        "start": 210.68,
-        "end": 214.52,
-        "text": "So being able to understand it as a language is quite important."
-    },
-    {
-        "start": 214.52,
-        "end": 218.36,
-        "text": "Now on the other hand, since you're going to be working and building out projects and"
-    },
-    {
-        "start": 218.36,
-        "end": 223.4,
-        "text": "directories and you need to share that with others, understanding Git as a tool is really"
-    },
-    {
-        "start": 223.4,
-        "end": 224.48,
-        "text": "important."
-    },
-    {
-        "start": 224.48,
-        "end": 230.52,
-        "text": "And being able to work with command line utilities or CLIs as well is quite important."
-    },
-    {
-        "start": 230.52,
-        "end": 234.92,
-        "text": "And you'll notice that with a lot of these AI tools, they're all using Linux underneath"
-    },
-    {
-        "start": 234.92,
-        "end": 235.92,
-        "text": "the hood."
-    },
-    {
-        "start": 235.92,
-        "end": 240.96,
-        "text": "So the combination of these three from Git to CLIs to Linux is quite important to be able"
-    },
-    {
-        "start": 240.96,
-        "end": 245.88,
-        "text": "to use the operating system where your AI agents will be deployed."
-    },
-    {
-        "start": 245.88,
-        "end": 252.52,
-        "text": "And finally, we have the ability to understand APIs or application programming interfaces."
-    },
-    {
-        "start": 252.52,
-        "end": 257.48,
-        "text": "And this is how you connect two different pieces of software to each other, right?"
-    },
-    {
-        "start": 257.48,
-        "end": 261.6,
-        "text": "And understanding how they work is going to be really crucial for a lot of use cases with"
-    },
-    {
-        "start": 261.6,
-        "end": 265.84,
-        "text": "AI because you're going to be making calls to models programmatically."
-    },
-    {
-        "start": 265.84,
-        "end": 270.44,
-        "text": "You're going to be handling the responses, dealing with rate limits and much more."
-    },
-    {
-        "start": 270.44,
-        "end": 276.68,
-        "text": "So every AI product and solution you'll eventually build is fundamentally a well-structured"
-    },
-    {
-        "start": 276.68,
-        "end": 282.08,
-        "text": "API calls from your application to the model to different tools and services and back and"
-    },
-    {
-        "start": 282.08,
-        "end": 283.08,
-        "text": "forth."
-    },
-    {
-        "start": 283.08,
-        "end": 285.12,
-        "text": "So this is the foundation."
-    },
-    {
-        "start": 285.12,
-        "end": 288.8,
-        "text": "So tier two is where we learn about these specific AI engineering skills."
-    },
-    {
-        "start": 288.8,
-        "end": 294.84,
-        "text": "For example, understanding what embeddings are for our data sources and being able to"
-    },
-    {
-        "start": 294.84,
-        "end": 297.4,
-        "text": "do vector search."
-    },
-    {
-        "start": 297.4,
-        "end": 301.76,
-        "text": "And the reason why you need to know about this is because this allows us to provide grounded"
-    },
-    {
-        "start": 301.76,
-        "end": 307.72,
-        "text": "information into the context window of an LLM in order to get accurate responses back."
-    },
-    {
-        "start": 307.72,
-        "end": 313.52,
-        "text": "And with embeddings, what we can do is we can help this machine system understand meaning"
-    },
-    {
-        "start": 313.52,
-        "end": 315.96,
-        "text": "instead of just matching keywords."
-    },
-    {
-        "start": 315.96,
-        "end": 321.28,
-        "text": "So what we do is we convert text from types of formats like PDFs and other data formats"
-    },
-    {
-        "start": 321.28,
-        "end": 323.48,
-        "text": "to numerical vectors."
-    },
-    {
-        "start": 323.48,
-        "end": 325.6,
-        "text": "And we search them by similarity."
-    },
-    {
-        "start": 325.6,
-        "end": 332.92,
-        "text": "So for example, how similar that the word Kubernetes is to words like containers and orchestration."
-    },
-    {
-        "start": 332.92,
-        "end": 338.36,
-        "text": "So in this three space, we can get relevant results back for different types of topics"
-    },
-    {
-        "start": 338.36,
-        "end": 339.88,
-        "text": "that we want to search on."
-    },
-    {
-        "start": 339.88,
-        "end": 344.84,
-        "text": "And the reason why this is important is because of retrieval, augmented generation or"
-    },
-    {
-        "start": 344.84,
-        "end": 346.24,
-        "text": "RAG."
-    },
-    {
-        "start": 346.24,
-        "end": 352.8,
-        "text": "RAG allows us to give a model accurate results back for specific information that might be"
-    },
-    {
-        "start": 352.8,
-        "end": 358.08,
-        "text": "company policies or legal documents instead of just hallucinating them because it wasn't"
-    },
-    {
-        "start": 358.08,
-        "end": 359.92,
-        "text": "trained on that information."
-    },
-    {
-        "start": 359.92,
-        "end": 363.68,
-        "text": "So the way that it typically works is in a pipeline."
-    },
-    {
-        "start": 363.68,
-        "end": 365.52,
-        "text": "Documents come into the pipeline."
-    },
-    {
-        "start": 365.52,
-        "end": 370.84,
-        "text": "They get chunked in fixed sizes that will fit in whatever data source we'll be using."
-    },
-    {
-        "start": 370.84,
-        "end": 376.8,
-        "text": "They're embedded into those vectors or numerical representations to be searched and stored"
-    },
-    {
-        "start": 376.8,
-        "end": 378.4,
-        "text": "in that database."
-    },
-    {
-        "start": 378.4,
-        "end": 384.0,
-        "text": "Now at the same time, when someone's asking a question about specific company data or"
-    },
-    {
-        "start": 384.0,
-        "end": 390.36,
-        "text": "personal information, what we do is we take that question and we add in relevant retrieved"
-    },
-    {
-        "start": 390.36,
-        "end": 397.12,
-        "text": "information from that database or vector source and feed that both the relevant information"
-    },
-    {
-        "start": 397.12,
-        "end": 402.56,
-        "text": "and the question into the context window of our large language model."
-    },
-    {
-        "start": 402.56,
-        "end": 407.88,
-        "text": "Then we get that result back which has been grounded in that factual information but"
-    },
-    {
-        "start": 407.88,
-        "end": 410.12,
-        "text": "also in natural language for us."
-    },
-    {
-        "start": 410.12,
-        "end": 415.96,
-        "text": "And almost every company experimenting with AI wants some version of RAG or retrieval, augmented"
-    },
-    {
-        "start": 415.96,
-        "end": 421.92,
-        "text": "generation, even if you're not using embeddings or working with another form of storage."
-    },
-    {
-        "start": 421.92,
-        "end": 424.84,
-        "text": "Now third is agents and tool use."
-    },
-    {
-        "start": 424.84,
-        "end": 430.0,
-        "text": "You've probably heard a lot about this if you're watching our channel because this is what's"
-    },
-    {
-        "start": 430.0,
-        "end": 436.56,
-        "text": "so popular right now because agents allow us to go from answering questions to actually"
-    },
-    {
-        "start": 436.56,
-        "end": 438.32,
-        "text": "doing things."
-    },
-    {
-        "start": 438.32,
-        "end": 444.4,
-        "text": "And again, this is probably the most in demand applied AI skill right now and a quick distinction."
-    },
-    {
-        "start": 444.4,
-        "end": 451.36,
-        "text": "A workflow typically follows a predefined path so you have step A, step B and step C because"
-    },
-    {
-        "start": 451.36,
-        "end": 453.28,
-        "text": "of different actions that are happening."
-    },
-    {
-        "start": 453.28,
-        "end": 455.12,
-        "text": "But with an agent, it's a little bit different."
-    },
-    {
-        "start": 455.12,
-        "end": 460.64,
-        "text": "An agent can dynamically decide what to do next so it can call tools that it needs to use."
-    },
-    {
-        "start": 460.64,
-        "end": 466.88,
-        "text": "It can observe those results and based on that go in a loop and make those decisions and"
-    },
-    {
-        "start": 466.88,
-        "end": 471.92,
-        "text": "building these loops is what's really important because one who can do this reliably and at"
-    },
-    {
-        "start": 471.92,
-        "end": 474.68,
-        "text": "scale, well that's a good AI engineer."
-    },
-    {
-        "start": 474.68,
-        "end": 479.08,
-        "text": "And finally tier three which is getting things shipped and deployed because to create real"
-    },
-    {
-        "start": 479.08,
-        "end": 484.04,
-        "text": "value things need to get off of our laptop and into the hands of real users."
-    },
-    {
-        "start": 484.04,
-        "end": 487.12,
-        "text": "And that means understanding deployment and basic operations."
-    },
-    {
-        "start": 487.12,
-        "end": 488.92,
-        "text": "So what skills you need?"
-    },
-    {
-        "start": 488.92,
-        "end": 491.72,
-        "text": "Well first off is containerization."
-    },
-    {
-        "start": 491.72,
-        "end": 497.56,
-        "text": "You need to be able to containerize or package up your AI agent and even the model two sometimes"
-    },
-    {
-        "start": 497.56,
-        "end": 502.4,
-        "text": "to be able to deploy this to different environments across the hybrid cloud."
-    },
-    {
-        "start": 502.4,
-        "end": 505.72,
-        "text": "So containerization and Kubernetes are really important."
-    },
-    {
-        "start": 505.72,
-        "end": 508.12,
-        "text": "Second is observability."
-    },
-    {
-        "start": 508.12,
-        "end": 514.36,
-        "text": "So when a model calls being made and that agent maybe is using different databases and going"
-    },
-    {
-        "start": 514.36,
-        "end": 520.48,
-        "text": "back and forth to collect data, we need to understand why the agent made that final decision."
-    },
-    {
-        "start": 520.48,
-        "end": 526.64,
-        "text": "And being able to observe all of those different functions is really important to transparency"
-    },
-    {
-        "start": 526.64,
-        "end": 529.28,
-        "text": "and trust behind AI."
-    },
-    {
-        "start": 529.28,
-        "end": 535.8,
-        "text": "Next is monitoring, making sure that you're not spending too much on your token bills and"
-    },
-    {
-        "start": 536.04,
-        "end": 542.0,
-        "text": "everything is kept safe, especially from a security standpoint and much, much more in the realm"
-    },
-    {
-        "start": 542.0,
-        "end": 543.48,
-        "text": "of deployment."
-    },
-    {
-        "start": 543.48,
-        "end": 549.2,
-        "text": "Now thankfully these AI DevTools can make you dramatically faster in this area too, whether"
-    },
-    {
-        "start": 549.2,
-        "end": 552.76,
-        "text": "you're deploying your application on something like bare metal."
-    },
-    {
-        "start": 552.76,
-        "end": 559.88,
-        "text": "So totally disconnected from the real world or maybe in cloud via some type of hosted service"
-    },
-    {
-        "start": 559.88,
-        "end": 562.84,
-        "text": "where you're deploying it across the world."
-    },
-    {
-        "start": 562.84,
-        "end": 568.24,
-        "text": "Now with these top two tiers, what I see in most use cases for AI and production right"
-    },
-    {
-        "start": 568.24,
-        "end": 575.32,
-        "text": "now is one rag so knowledge systems that are powering HR services, hospitals, online"
-    },
-    {
-        "start": 575.32,
-        "end": 581.52,
-        "text": "chatbots, allowing users to be able to ask questions to their businesses that they use"
-    },
-    {
-        "start": 581.52,
-        "end": 587.52,
-        "text": "or within organizations and get back that grounded data from those searches."
-    },
-    {
-        "start": 587.52,
-        "end": 593.92,
-        "text": "The second off is with agents and tools being able to use an agent that can query a database,"
-    },
-    {
-        "start": 593.92,
-        "end": 599.32,
-        "text": "visualize data and be able to do things that typically a subject matter expert only could."
-    },
-    {
-        "start": 600.0,
-        "end": 604.0,
-        "text": "And then finally is helping with deployed applications."
-    },
-    {
-        "start": 604.0,
-        "end": 607.48,
-        "text": "So helping engineers get their code shipped in hours"
-    },
-    {
-        "start": 607.48,
-        "end": 609.72,
-        "text": "and not weeks using these AI tools."
-    },
-    {
-        "start": 609.72,
-        "end": 612.28,
-        "text": "Those are three of the most common use cases"
-    },
-    {
-        "start": 612.28,
-        "end": 614.68,
-        "text": "that I see with AI right now."
-    },
-    {
-        "start": 614.68,
-        "end": 618.0,
-        "text": "And I encourage you to build in those specific areas"
-    },
-    {
-        "start": 618.0,
-        "end": 619.84,
-        "text": "with your own personal interest"
-    },
-    {
-        "start": 619.84,
-        "end": 621.8,
-        "text": "because that'll be huge for your career"
-    },
-    {
-        "start": 621.8,
-        "end": 624.44,
-        "text": "and experience in AI engineering."
-    },
-    {
-        "start": 624.44,
-        "end": 627.52,
-        "text": "But now you know what AI engineers do, right?"
-    },
-    {
-        "start": 627.52,
-        "end": 630.68,
-        "text": "They build systems around language models"
-    },
-    {
-        "start": 630.68,
-        "end": 633.24,
-        "text": "using these three tiers of skills."
-    },
-    {
-        "start": 633.24,
-        "end": 635.6,
-        "text": "And you can start building today too."
-    },
-    {
-        "start": 635.6,
-        "end": 637.6,
-        "text": "So thanks so much for watching."
-    },
-    {
-        "start": 637.6,
-        "end": 640.36,
-        "text": "If you enjoyed the video, please be sure to leave a like"
-    },
-    {
-        "start": 640.36,
-        "end": 642.04,
-        "text": "and we'll catch you in the next one."
-    },
-    {
-        "start": 642.04,
-        "end": 642.88,
-        "text": "Bye."
+        "start": 268.0,
+        "end": 278.88,
+        "text": "video and thank you for watching Namaste JavaScript."
     }
 ]

@@ -1,331 +1,163 @@
 [
     {
-        "text": "If you want to become an AI engineer, well, you might not need a computer science degree, but what you do need are the right skills and to understand the fundamentals. And today, I'm going to break down what an AI engineer actually is, the skill stack that",
+        "text": "Do you know how JavaScript works and how the code is executed? Is JavaScript synch an us or asynchronous? Is JavaScript single threaded or is it multi threaded? Don't worry, we'll cover everything. Just keep watching namaste JavaScript. Before I start explaining, listen to this",
         "metadata": {
             "start": 0.0,
-            "end": 16.6
+            "end": 17.92
         }
     },
     {
-        "text": "And today, I'm going to break down what an AI engineer actually is, the skill stack that you need to learn, and three projects that will help demonstrate your skills to potential employers. And a few years ago, the path in a tech was pretty straightforward, right?",
+        "text": "everything. Just keep watching namaste JavaScript. Before I start explaining, listen to this first core fundamental. It is everything in JavaScript happens inside the execution context. I repeat, everything in JavaScript happens inside the execution context. You can assume this",
         "metadata": {
-            "start": 10.56,
-            "end": 28.0
+            "start": 12.24,
+            "end": 31.6
         }
     },
     {
-        "text": "And a few years ago, the path in a tech was pretty straightforward, right? You would get a degree, go do some internships, grind coding challenges, and hope for a call back from the job employer, right? But things have changed recently. AI coding tools have made it easy to generate code, which means the code itself isn't the",
+        "text": "I repeat, everything in JavaScript happens inside the execution context. You can assume this execution context to be a big box or a container in which whole JavaScript code is executed. So let us now see how this execution context actually looks like. So follow along with me.",
         "metadata": {
-            "start": 23.68,
-            "end": 44.2
+            "start": 25.44,
+            "end": 42.16
         }
     },
     {
-        "text": "AI coding tools have made it easy to generate code, which means the code itself isn't the hard part anymore, but the hard part is judgment. So being able to make the right decisions for situations like how to structure applications, knowing what to build, and specifically why one approach would be another.",
+        "text": "So let us now see how this execution context actually looks like. So follow along with me. So now watch this carefully. So execution in context is like a big box and it has two components in it. The first component is also known as the memory component.",
         "metadata": {
-            "start": 38.4,
-            "end": 62.64
+            "start": 37.12,
+            "end": 57.2
         }
     },
     {
-        "text": "knowing what to build, and specifically why one approach would be another. And that's something that a class can't always teach you, but you can definitely learn by building. So the question is, what do you actually need to learn to become an AI engineer, and how",
+        "text": "and it has two components in it. The first component is also known as the memory component. So this is the place where all the variables and functions are stored as a key value pairs. Something like this. So key value, suppose we have a variable A which is equivalent to 10,",
         "metadata": {
-            "start": 56.4,
-            "end": 74.24
+            "start": 47.84,
+            "end": 67.68
         }
     },
     {
-        "text": "So the question is, what do you actually need to learn to become an AI engineer, and how can you demonstrate that to employers? First off, the term is quite new. An AI engineer is not a machine learning researcher. It's a researcher who trains foundational models from scratch.",
+        "text": "Something like this. So key value, suppose we have a variable A which is equivalent to 10, it will be stored over here and similarly functions are also stored over here in this memory component. There is also a heavy word for this memory component and this memory component is",
         "metadata": {
-            "start": 68.72,
-            "end": 87.76
+            "start": 62.48,
+            "end": 78.72
         }
     },
     {
-        "text": "It's a researcher who trains foundational models from scratch. They publish papers about those models and the new architectures that they're working on. And this position typically requires deep math and usually an advanced degree. On the other hand, an AI engineer is different.",
+        "text": "component. There is also a heavy word for this memory component and this memory component is also known as variable environment. Okay, so listen to this carefully variable environment. So it's sort of an environment in which all these variables and functions are stored as the key",
         "metadata": {
-            "start": 83.44,
-            "end": 104.6
+            "start": 73.44,
+            "end": 94.08
         }
     },
     {
-        "text": "On the other hand, an AI engineer is different. You're building with models that already exist. And for example, those could be the models like Frontier or open source that have been developed by those researchers, but you take that model and wire it into a system that",
+        "text": "So it's sort of an environment in which all these variables and functions are stored as the key value pairs. Something like that. The second component of this execution context is the code component. So here is it. So this is the place where code is executed one line at a time.",
         "metadata": {
-            "start": 100.44,
-            "end": 118.3
+            "start": 88.8,
+            "end": 106.56
         }
     },
     {
-        "text": "developed by those researchers, but you take that model and wire it into a system that does useful work. So for example, that means connecting a model to data. That means perhaps giving it access to tools and outside external information, giving it memory loops and guard rails, and many other capabilities that can turn a model into a solution",
+        "text": "component. So here is it. So this is the place where code is executed one line at a time. So this is the place. So just like this memory component is also known as the variable environment. There is also a heavy word for this code component. It is also known as thread of execution.",
         "metadata": {
-            "start": 112.84,
-            "end": 137.48
+            "start": 99.92,
+            "end": 117.6
         }
     },
     {
-        "text": "memory loops and guard rails, and many other capabilities that can turn a model into a solution that someone can actually use. So if ML researchers are the ones building the engine, then AI engineers are the ones building the car. And right now, with the influx of models, we desperately need more folks who can build",
+        "text": "There is also a heavy word for this code component. It is also known as thread of execution. I repeat thread of execution. So this is also known as the thread of execution. So this thread of execution is just like a thread in which the whole code is executed one line at a time.",
         "metadata": {
-            "start": 130.0,
-            "end": 151.8
+            "start": 111.68,
+            "end": 130.64
         }
     },
     {
-        "text": "And right now, with the influx of models, we desperately need more folks who can build these cars and AI solutions for organizations. Now with the foundations, though, I typically think of this as three tiers. And this order really matters. I'll explain why.",
+        "text": "execution is just like a thread in which the whole code is executed one line at a time. So here's the time for another core fundamental. Listen to this really very carefully. So JavaScript is a synchronous single threaded language. So this is really very important. JavaScript is a",
         "metadata": {
-            "start": 146.6,
-            "end": 163.28
+            "start": 124.96,
+            "end": 141.52
         }
     },
     {
-        "text": "I'll explain why. Because with this foundation at the bottom, what people sometimes do is they skip the foundation here and they go straight into building agents or deploying them before they can handle data and understand the intricacies of infrastructure.",
+        "text": "is a synchronous single threaded language. So this is really very important. JavaScript is a synchronous single threaded language. So let us see what does this means. So when I say single threaded, that means JavaScript can only execute one command at a time. And when I say synchronous",
         "metadata": {
-            "start": 161.52,
-            "end": 180.04
+            "start": 136.0,
+            "end": 154.16
         }
     },
     {
-        "text": "can handle data and understand the intricacies of infrastructure. So they spend a lot of time relearning the basics. So tier one is your foundations. This is the stuff that's not specific to AI, but you absolutely can't build without it. For example, using Python.",
+        "text": "threaded, that means JavaScript can only execute one command at a time. And when I say synchronous single threaded, that means that JavaScript can only execute one command at a time and in a specific order. Okay. So that means that it can only go to the next line once the current line",
         "metadata": {
-            "start": 175.72,
-            "end": 193.44
+            "start": 148.0,
+            "end": 167.36
         }
     },
     {
-        "text": "For example, using Python. So Python, you don't have to be a wizard, but you just have to be fluent enough to read code and understand what your AI agent is writing. Because a lot of machine learning libraries and AI packages will be using Python underneath",
+        "text": "specific order. Okay. So that means that it can only go to the next line once the current line has been finished executing. So that means synchronous single threaded language. So let's revise once again. JavaScript is a synchronous single threaded language. I know that you must be thinking",
         "metadata": {
-            "start": 190.32,
-            "end": 207.56
+            "start": 160.48,
+            "end": 179.2
         }
     },
     {
-        "text": "Because a lot of machine learning libraries and AI packages will be using Python underneath the hood, for example, PyTorch and TensorFlow. So being able to understand it as a language is quite important. Now on the other hand, since you're going to be working and building out projects and",
+        "text": "once again. JavaScript is a synchronous single threaded language. I know that you must be thinking we have heard of something known as ajx, right? Where a stands for asynchronous. So what does that means? Don't worry. We'll cover everything. We'll be going slowly and we'll be understanding each",
         "metadata": {
-            "start": 201.96,
-            "end": 218.36
+            "start": 172.72,
+            "end": 191.04
         }
     },
     {
-        "text": "Now on the other hand, since you're going to be working and building out projects and directories and you need to share that with others, understanding Git as a tool is really important. And being able to work with command line utilities or CLIs as well is quite important.",
+        "text": "means? Don't worry. We'll cover everything. We'll be going slowly and we'll be understanding each of these concepts properly as we go ahead. So for now, just remember that JavaScript is not possible without this beautiful execution context. So let's just quickly recap what we studied.",
         "metadata": {
-            "start": 214.52,
-            "end": 230.52
+            "start": 185.6,
+            "end": 202.08
         }
     },
     {
-        "text": "And being able to work with command line utilities or CLIs as well is quite important. And you'll notice that with a lot of these AI tools, they're all using Linux underneath the hood. So the combination of these three from Git to CLIs to Linux is quite important to be able",
+        "text": "possible without this beautiful execution context. So let's just quickly recap what we studied. This whole thing which you can see is the execution context. The first component is known as the memory component. The second component is known as the code component. Memory component contains",
         "metadata": {
-            "start": 224.48,
-            "end": 240.96
+            "start": 196.64,
+            "end": 211.68
         }
     },
     {
-        "text": "So the combination of these three from Git to CLIs to Linux is quite important to be able to use the operating system where your AI agents will be deployed. And finally, we have the ability to understand APIs or application programming interfaces. And this is how you connect two different pieces of software to each other, right?",
+        "text": "memory component. The second component is known as the code component. Memory component contains variables and functions as the key value pairs. And this code component is the place where whole JavaScript code is executed. Memory component is also known as the variable environment. And the",
         "metadata": {
-            "start": 235.92,
-            "end": 257.48
+            "start": 206.72,
+            "end": 222.32
         }
     },
     {
-        "text": "And this is how you connect two different pieces of software to each other, right? And understanding how they work is going to be really crucial for a lot of use cases with AI because you're going to be making calls to models programmatically. You're going to be handling the responses, dealing with rate limits and much more.",
+        "text": "JavaScript code is executed. Memory component is also known as the variable environment. And the code component is also known as the thread of execution. I know these are a lot of jargons. And trust me, these things are really, very important and nobody teaches them. But I am here on",
         "metadata": {
-            "start": 252.52,
-            "end": 270.44
+            "start": 217.28,
+            "end": 233.92
         }
     },
     {
-        "text": "You're going to be handling the responses, dealing with rate limits and much more. So every AI product and solution you'll eventually build is fundamentally a well-structured API calls from your application to the model to different tools and services and back and",
+        "text": "And trust me, these things are really, very important and nobody teaches them. But I am here on a mission to make you fall in love with JavaScript. And don't worry. Continue along with me and we'll be covering everything in deep. So in the next video, I'll actually walk you through a real",
         "metadata": {
-            "start": 265.84,
-            "end": 282.08
+            "start": 229.04,
+            "end": 243.36
         }
     },
     {
-        "text": "API calls from your application to the model to different tools and services and back and forth. So this is the foundation. So tier two is where we learn about these specific AI engineering skills. For example, understanding what embeddings are for our data sources and being able to",
+        "text": "we'll be covering everything in deep. So in the next video, I'll actually walk you through a real JavaScript program. We will see how this whole beautiful execution context is created, how this memory section is created, how this code is executed inside this code component. Everything",
         "metadata": {
-            "start": 276.68,
-            "end": 294.84
+            "start": 238.72,
+            "end": 253.76
         }
     },
     {
-        "text": "For example, understanding what embeddings are for our data sources and being able to do vector search. And the reason why you need to know about this is because this allows us to provide grounded information into the context window of an LLM in order to get accurate responses back.",
+        "text": "how this memory section is created, how this code is executed inside this code component. Everything will cover in the next video. But before jumping on to that video, you have to do two things. First is to like this video. It gives me a huge motivation. And the second thing is to come",
         "metadata": {
-            "start": 288.8,
-            "end": 307.72
+            "start": 248.56,
+            "end": 262.96
         }
     },
     {
-        "text": "information into the context window of an LLM in order to get accurate responses back. And with embeddings, what we can do is we can help this machine system understand meaning instead of just matching keywords. So what we do is we convert text from types of formats like PDFs and other data formats",
+        "text": "First is to like this video. It gives me a huge motivation. And the second thing is to come in down what you liked about this video and are you feeling excited or not? So that's all in this video and thank you for watching Namaste JavaScript.",
         "metadata": {
-            "start": 301.76,
-            "end": 321.28
-        }
-    },
-    {
-        "text": "So what we do is we convert text from types of formats like PDFs and other data formats to numerical vectors. And we search them by similarity. So for example, how similar that the word Kubernetes is to words like containers and orchestration. So in this three space, we can get relevant results back for different types of topics",
-        "metadata": {
-            "start": 315.96,
-            "end": 338.36
-        }
-    },
-    {
-        "text": "So in this three space, we can get relevant results back for different types of topics that we want to search on. And the reason why this is important is because of retrieval, augmented generation or RAG. RAG allows us to give a model accurate results back for specific information that might be",
-        "metadata": {
-            "start": 332.92,
-            "end": 352.8
-        }
-    },
-    {
-        "text": "RAG allows us to give a model accurate results back for specific information that might be company policies or legal documents instead of just hallucinating them because it wasn't trained on that information. So the way that it typically works is in a pipeline.",
-        "metadata": {
-            "start": 346.24,
-            "end": 363.68
-        }
-    },
-    {
-        "text": "So the way that it typically works is in a pipeline. Documents come into the pipeline. They get chunked in fixed sizes that will fit in whatever data source we'll be using. They're embedded into those vectors or numerical representations to be searched and stored",
-        "metadata": {
-            "start": 359.92,
-            "end": 376.8
-        }
-    },
-    {
-        "text": "They're embedded into those vectors or numerical representations to be searched and stored in that database. Now at the same time, when someone's asking a question about specific company data or personal information, what we do is we take that question and we add in relevant retrieved",
-        "metadata": {
-            "start": 370.84,
-            "end": 390.36
-        }
-    },
-    {
-        "text": "personal information, what we do is we take that question and we add in relevant retrieved information from that database or vector source and feed that both the relevant information and the question into the context window of our large language model.",
-        "metadata": {
-            "start": 384.0,
-            "end": 402.56
-        }
-    },
-    {
-        "text": "and the question into the context window of our large language model. Then we get that result back which has been grounded in that factual information but also in natural language for us. And almost every company experimenting with AI wants some version of RAG or retrieval, augmented",
-        "metadata": {
-            "start": 397.12,
-            "end": 415.96
-        }
-    },
-    {
-        "text": "And almost every company experimenting with AI wants some version of RAG or retrieval, augmented generation, even if you're not using embeddings or working with another form of storage. Now third is agents and tool use. You've probably heard a lot about this if you're watching our channel because this is what's",
-        "metadata": {
-            "start": 410.12,
-            "end": 430.0
-        }
-    },
-    {
-        "text": "You've probably heard a lot about this if you're watching our channel because this is what's so popular right now because agents allow us to go from answering questions to actually doing things. And again, this is probably the most in demand applied AI skill right now and a quick distinction.",
-        "metadata": {
-            "start": 424.84,
-            "end": 444.4
-        }
-    },
-    {
-        "text": "And again, this is probably the most in demand applied AI skill right now and a quick distinction. A workflow typically follows a predefined path so you have step A, step B and step C because of different actions that are happening. But with an agent, it's a little bit different.",
-        "metadata": {
-            "start": 438.32,
-            "end": 455.12
-        }
-    },
-    {
-        "text": "But with an agent, it's a little bit different. An agent can dynamically decide what to do next so it can call tools that it needs to use. It can observe those results and based on that go in a loop and make those decisions and building these loops is what's really important because one who can do this reliably and at",
-        "metadata": {
-            "start": 453.28,
-            "end": 471.92
-        }
-    },
-    {
-        "text": "building these loops is what's really important because one who can do this reliably and at scale, well that's a good AI engineer. And finally tier three which is getting things shipped and deployed because to create real value things need to get off of our laptop and into the hands of real users.",
-        "metadata": {
-            "start": 466.88,
-            "end": 484.04
-        }
-    },
-    {
-        "text": "value things need to get off of our laptop and into the hands of real users. And that means understanding deployment and basic operations. So what skills you need? Well first off is containerization. You need to be able to containerize or package up your AI agent and even the model two sometimes",
-        "metadata": {
-            "start": 479.08,
-            "end": 497.56
-        }
-    },
-    {
-        "text": "You need to be able to containerize or package up your AI agent and even the model two sometimes to be able to deploy this to different environments across the hybrid cloud. So containerization and Kubernetes are really important. Second is observability.",
-        "metadata": {
-            "start": 491.72,
-            "end": 508.12
-        }
-    },
-    {
-        "text": "Second is observability. So when a model calls being made and that agent maybe is using different databases and going back and forth to collect data, we need to understand why the agent made that final decision. And being able to observe all of those different functions is really important to transparency",
-        "metadata": {
-            "start": 505.72,
-            "end": 526.64
-        }
-    },
-    {
-        "text": "And being able to observe all of those different functions is really important to transparency and trust behind AI. Next is monitoring, making sure that you're not spending too much on your token bills and everything is kept safe, especially from a security standpoint and much, much more in the realm",
-        "metadata": {
-            "start": 520.48,
-            "end": 542.0
-        }
-    },
-    {
-        "text": "everything is kept safe, especially from a security standpoint and much, much more in the realm of deployment. Now thankfully these AI DevTools can make you dramatically faster in this area too, whether you're deploying your application on something like bare metal.",
-        "metadata": {
-            "start": 536.04,
-            "end": 552.76
-        }
-    },
-    {
-        "text": "you're deploying your application on something like bare metal. So totally disconnected from the real world or maybe in cloud via some type of hosted service where you're deploying it across the world. Now with these top two tiers, what I see in most use cases for AI and production right",
-        "metadata": {
-            "start": 549.2,
-            "end": 568.24
-        }
-    },
-    {
-        "text": "Now with these top two tiers, what I see in most use cases for AI and production right now is one rag so knowledge systems that are powering HR services, hospitals, online chatbots, allowing users to be able to ask questions to their businesses that they use",
-        "metadata": {
-            "start": 562.84,
-            "end": 581.52
-        }
-    },
-    {
-        "text": "chatbots, allowing users to be able to ask questions to their businesses that they use or within organizations and get back that grounded data from those searches. The second off is with agents and tools being able to use an agent that can query a database,",
-        "metadata": {
-            "start": 575.32,
-            "end": 593.92
-        }
-    },
-    {
-        "text": "The second off is with agents and tools being able to use an agent that can query a database, visualize data and be able to do things that typically a subject matter expert only could. And then finally is helping with deployed applications. So helping engineers get their code shipped in hours",
-        "metadata": {
-            "start": 587.52,
-            "end": 607.48
-        }
-    },
-    {
-        "text": "So helping engineers get their code shipped in hours and not weeks using these AI tools. Those are three of the most common use cases that I see with AI right now. And I encourage you to build in those specific areas with your own personal interest because that'll be huge for your career",
-        "metadata": {
-            "start": 604.0,
-            "end": 621.8
-        }
-    },
-    {
-        "text": "because that'll be huge for your career and experience in AI engineering. But now you know what AI engineers do, right? They build systems around language models using these three tiers of skills. And you can start building today too. So thanks so much for watching.",
-        "metadata": {
-            "start": 619.84,
-            "end": 637.6
-        }
-    },
-    {
-        "text": "So thanks so much for watching. If you enjoyed the video, please be sure to leave a like and we'll catch you in the next one. Bye.",
-        "metadata": {
-            "start": 635.6,
-            "end": 642.88
+            "start": 258.48,
+            "end": 278.88
         }
     }
 ]

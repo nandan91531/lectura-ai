@@ -1,20 +1,32 @@
 [
     {
-        "timestamp": "01:07",
-        "type": "Question / Discussion",
-        "task": "What do you actually need to learn to become an AI engineer, and how can you demonstrate that to employers?",
+        "timestamp": "00:00",
+        "type": "Question",
+        "task": "Do you know how JavaScript works and how the code is executed?",
         "explanation": ""
     },
     {
-        "timestamp": "01:18",
-        "type": "Question / Discussion",
-        "task": "What is the difference between an AI engineer and an ML researcher?",
+        "timestamp": "00:05",
+        "type": "Question",
+        "task": "Is JavaScript synchronous or asynchronous?",
         "explanation": ""
     },
     {
-        "timestamp": "10:14",
-        "type": "Homework / Assignment",
-        "task": "Build projects in the three key areas of AI engineering: knowledge systems (RAG), agents and tool use, and deployed applications to enhance career relevance.",
+        "timestamp": "00:05",
+        "type": "Question",
+        "task": "Is JavaScript single-threaded or multi-threaded?",
+        "explanation": ""
+    },
+    {
+        "timestamp": "04:18",
+        "type": "Homework / Discussion",
+        "task": "Like this video to motivate the instructor and share what you liked about the video, including whether you're feeling excited about the content.",
+        "explanation": ""
+    },
+    {
+        "timestamp": "04:22",
+        "type": "Key Discussion",
+        "task": "Come down with your thoughts: Are you feeling excited about the content?",
         "explanation": ""
     }
 ]
