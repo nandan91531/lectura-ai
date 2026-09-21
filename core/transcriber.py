@@ -28,6 +28,7 @@ def run_transcription(
 
     model = whisper.load_model(model_name)
     all_segments = []
+    current_offset = 0.0
 
     for index, file_path in enumerate(files):
         if progress_callback:
@@ -38,15 +39,22 @@ def run_transcription(
             transcribe_kwargs["language"] = language
 
         result = model.transcribe(file_path, **transcribe_kwargs)
-        chunk_offset = index * 600  # 10 minutes chunk offset
 
         for segment in result["segments"]:
             clean_segment = {
-                "start": round(segment["start"] + chunk_offset, 2),
-                "end": round(segment["end"] + chunk_offset, 2),
+                "start": round(segment["start"] + current_offset, 2),
+                "end": round(segment["end"] + current_offset, 2),
                 "text": segment["text"].strip()
             }
             all_segments.append(clean_segment)
+
+        # Update offset with actual duration of this audio chunk
+        try:
+            from pydub import AudioSegment
+            chunk_audio = AudioSegment.from_file(file_path)
+            current_offset += len(chunk_audio) / 1000.0
+        except Exception:
+            current_offset += 600.0
 
     if progress_callback:
         progress_callback(len(files), len(files), "Saving transcription JSON...")

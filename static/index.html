@@ -864,7 +864,7 @@
                 const res = await fetch('/api/chat', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ question: query, top_k: 4 })
+                    body: JSON.stringify({ question: query, top_k: 2 })
                 });
                 const data = await res.json();
 
@@ -880,7 +880,8 @@
                                 uniqueSources.push(s);
                             }
                         }
-                        sourcesHtml = '<div style="margin-top: 8px;">' + uniqueSources.map(s => `
+                        const top2Sources = uniqueSources.slice(0, 2);
+                        sourcesHtml = '<div style="margin-top: 8px;">' + top2Sources.map(s => `
                             <span class="source-tag" onclick="seekVideo(${s.start})">
                                 ▶ ${s.start_fmt} - ${s.end_fmt}
                             </span>

@@ -47,9 +47,14 @@ def extract_questions_and_tasks(
     llm = ChatMistralAI(model=model_name, temperature=0.1, api_key=api_key)
 
     prompt = ChatPromptTemplate.from_template(
-        """You are an expert academic assistant. Scan the timestamped lecture transcript below and extract ALL questions asked by the speaker, practice problems, homework tasks, exercises, code challenges, or key discussion questions.
+        """You are an expert academic assistant. Scan the timestamped lecture transcript below and extract ALL:
+1. Questions asked by the instructor or speaker during the lecture.
+2. Homework tasks, assignments, practice problems, code challenges, or work assigned to students.
+3. Key self-assessment questions and discussion points.
 
-If no explicit homework is assigned, extract 3 to 6 key self-assessment questions and discussion points that test understanding of the material along with their approximate timestamps.
+CRITICAL REQUIREMENT:
+- Every item in the JSON array MUST be a flat JSON object.
+- The "task" field MUST be a plain string (never an array or nested object).
 
 Return ONLY a raw valid JSON array. Do not include markdown code block formatting (` ```json ` or ` ``` `).
 
@@ -57,8 +62,8 @@ JSON Schema required:
 [
   {{
     "timestamp": "MM:SS",
-    "type": "Question / Homework / Exercise / Discussion",
-    "task": "The specific question or task asked or implied in the lecture",
+    "type": "Question / Homework / Assignment / Exercise / Discussion",
+    "task": "Clear, specific question or task description",
     "explanation": "Brief context or answer guidance based on the video"
   }}
 ]
@@ -77,23 +82,28 @@ Timestamped Transcript:
 
     cleaned = re.sub(r"```(?:json)?", "", raw_response).strip()
 
+    parsed_tasks = []
     # Attempt 1: Direct JSON parsing
     try:
         data = json.loads(cleaned)
         if isinstance(data, list):
-            return data
+            parsed_tasks = data
     except Exception:
         pass
 
-    # Attempt 2: Extract JSON array with regex
-    match = re.search(r"\[\s*\{.*\}\s*\]", cleaned, re.DOTALL)
-    if match:
-        try:
-            data = json.loads(match.group(0))
-            if isinstance(data, list):
-                return data
-        except Exception:
-            pass
+    if not parsed_tasks:
+        # Attempt 2: Extract JSON array with regex
+        match = re.search(r"\[\s*\{.*\}\s*\]", cleaned, re.DOTALL)
+        if match:
+            try:
+                data = json.loads(match.group(0))
+                if isinstance(data, list):
+                    parsed_tasks = data
+            except Exception:
+                pass
+
+    if parsed_tasks:
+        return normalize_extracted_tasks(parsed_tasks)
 
     # Attempt 3: Heuristic line parsing fallback
     fallback_tasks = []
@@ -107,7 +117,7 @@ Timestamped Transcript:
         
         if "question" in line_str.lower() or "?" in line_str:
             task_type = "Question"
-        elif "homework" in line_str.lower() or "task" in line_str.lower():
+        elif "homework" in line_str.lower() or "assignment" in line_str.lower() or "task" in line_str.lower():
             task_type = "Homework"
         else:
             task_type = "Discussion"
@@ -121,5 +131,52 @@ Timestamped Transcript:
                 "explanation": "Extracted from lecture discussion."
             })
 
-    return fallback_tasks
+    return normalize_extracted_tasks(fallback_tasks)
+
+
+def normalize_extracted_tasks(tasks):
+    """Guarantees that returned tasks are a flat list of dicts with string fields."""
+    normalized = []
+    if not isinstance(tasks, list):
+        return normalized
+    for item in tasks:
+        if not isinstance(item, dict):
+            continue
+        ts = item.get("timestamp", "00:00")
+        t_type = item.get("type", "Question")
+        task_val = item.get("task", "")
+        exp_val = item.get("explanation", "")
+        
+        if isinstance(task_val, list):
+            for sub in task_val:
+                if isinstance(sub, dict):
+                    normalized.append({
+                        "timestamp": sub.get("timestamp", ts),
+                        "type": t_type,
+                        "task": str(sub.get("task") or sub.get("explanation") or "Task Item"),
+                        "explanation": str(sub.get("explanation", ""))
+                    })
+                elif isinstance(sub, str):
+                    normalized.append({
+                        "timestamp": ts,
+                        "type": t_type,
+                        "task": sub,
+                        "explanation": str(exp_val) if isinstance(exp_val, str) else ""
+                    })
+        elif isinstance(task_val, dict):
+            normalized.append({
+                "timestamp": task_val.get("timestamp", ts),
+                "type": t_type,
+                "task": str(task_val.get("task") or task_val.get("explanation") or "Task Item"),
+                "explanation": str(task_val.get("explanation", ""))
+            })
+        else:
+            normalized.append({
+                "timestamp": str(ts),
+                "type": str(t_type),
+                "task": str(task_val),
+                "explanation": str(exp_val) if exp_val else ""
+            })
+    return normalized
+
 

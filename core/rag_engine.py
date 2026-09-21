@@ -19,10 +19,16 @@ MISTRAL_MODEL = "ministral-3b-2512"
 
 def format_timestamp(seconds):
     """
-    Converts seconds float into MM:SS format.
+    Converts seconds float into MM:SS or HH:MM:SS format.
     """
-    minutes = int(seconds // 60)
-    rem_seconds = int(seconds % 60)
+    if seconds is None:
+        return "00:00"
+    seconds = int(seconds)
+    hours = seconds // 3600
+    minutes = (seconds % 3600) // 60
+    rem_seconds = seconds % 60
+    if hours > 0:
+        return f"{hours:02d}:{minutes:02d}:{rem_seconds:02d}"
     return f"{minutes:02d}:{rem_seconds:02d}"
 
 def clean_llm_response(text: str) -> str:
@@ -50,12 +56,12 @@ def ask_question(
     embedding_model=EMBEDDING_MODEL,
     mistral_api_key=None,
     model_name=MISTRAL_MODEL,
-    top_k=4,
+    top_k=2,
     temperature=0.2
 ):
     """
     Performs vector similarity search on ChromaDB and generates AI answer with timestamp sources.
-    Returns: (answer_text, sources_list)
+    Returns: (answer_text, sources_list) - sources_list contains at most top 2 relevant timestamps.
     """
     api_key = mistral_api_key or os.getenv("MISTRAL_API_KEY")
     if not api_key:
@@ -72,7 +78,9 @@ def ask_question(
         persist_directory=chroma_dir
     )
 
-    results = vector_store.similarity_search(question, k=top_k)
+    # Use k=top_k (max 2 by default)
+    k_retrieve = min(top_k, 2) if top_k else 2
+    results = vector_store.similarity_search(question, k=k_retrieve)
 
     if not results:
         return "No relevant information found in the video transcript for your question.", []
@@ -102,6 +110,9 @@ def ask_question(
                 "content": doc.page_content
             })
 
+    # Strictly limit to top 2 sources maximum
+    sources = sources[:2]
+
     context_str = "\n\n".join(context_parts)
 
     llm = ChatMistralAI(
@@ -114,14 +125,14 @@ def ask_question(
     prompt = ChatPromptTemplate.from_messages([
         ("system", """You are an expert AI assistant for lecture videos.
 
-Answer the user's question accurately, completely, and directly using ALL relevant information from the provided lecture snippets.
+Answer the user's question directly, concisely, and accurately using ONLY the information provided in the lecture context.
 
 STRICT RULES:
-1. Start IMMEDIATELY with the answer. NEVER use conversational preambles or filler intros (e.g. NEVER say "Here's a structured breakdown...", "Based on the provided snippets...", "Here is the answer:").
-2. Ensure the answer is COMPLETE and covers ALL types, categories, steps, definitions, and examples mentioned across the provided context without omitting items.
-3. Use clean, standard Markdown with double line breaks between paragraphs, headings, and list items.
-4. Keep subheadings brief and bold key terms.
-5. Do NOT invent facts outside the context. If the topic is missing, state: "This topic was not covered in the lecture."
+1. STRICT CONTEXT GROUNDING: Rely ONLY on facts explicitly stated in the provided lecture context. Never assume, extrapolate, or bring in outside general knowledge not present in the lecture.
+2. ANSWER ONLY WHAT IS ASKED: Be direct and concise. Answer only the specific question asked by the user. Do NOT dump unrelated lecture content, definitions, or full lecture summaries unless explicitly requested.
+3. ABSENCE OF INFORMATION: If the answer to the user's specific question is not present in the provided lecture context, state clearly and concisely: "This topic was not covered in the lecture video."
+4. NO FILLER INTROS: Start IMMEDIATELY with the answer. NEVER use conversational preambles or filler intros (e.g. NEVER say "Based on the provided snippets...", "Here is the answer:", "According to the lecture...").
+5. FORMATTING: Use clean, concise standard Markdown with clear bullet points or short paragraphs where appropriate.
 """),
         ("human", """Context from Lecture:
 {context}

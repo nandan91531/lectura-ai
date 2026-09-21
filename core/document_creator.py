@@ -8,11 +8,12 @@ import os
 def create_documents(
     input_file="data/transcription.json",
     output_file="data/documents.json",
-    max_chunk_size=1200,
-    overlap_segments=3
+    max_chunk_size=250,
+    overlap_segments=1
 ):
     """
     Groups Whisper segments into structured documents with overlap and timestamp metadata.
+    Uses a smaller chunk size (max_chunk_size=250) so timestamps pinpoint exact video locations.
     """
     if isinstance(input_file, str):
         if not os.path.exists(input_file):
@@ -36,13 +37,13 @@ def create_documents(
             document = {
                 "text": chunk_text,
                 "metadata": {
-                    "start": current_segments[0]["start"],
-                    "end": current_segments[-1]["end"]
+                    "start": float(current_segments[0]["start"]),
+                    "end": float(current_segments[-1]["end"])
                 }
             }
             documents.append(document)
 
-            current_segments = current_segments[-overlap_segments:]
+            current_segments = current_segments[-overlap_segments:] if overlap_segments > 0 else []
             current_length = sum(len(item["text"]) for item in current_segments)
 
     if current_segments:
@@ -50,8 +51,8 @@ def create_documents(
         document = {
             "text": chunk_text,
             "metadata": {
-                "start": current_segments[0]["start"],
-                "end": current_segments[-1]["end"]
+                "start": float(current_segments[0]["start"]),
+                "end": float(current_segments[-1]["end"])
             }
         }
         documents.append(document)

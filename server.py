@@ -108,7 +108,7 @@ class IngestRequest(BaseModel):
 
 class ChatRequest(BaseModel):
     question: str
-    top_k: Optional[int] = 4
+    top_k: Optional[int] = 2
     api_key: Optional[str] = None
 
 @app.get("/", response_class=HTMLResponse)
@@ -308,5 +308,7 @@ async def export_txt():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=8080)
+    port = int(os.getenv("PORT", 8000))
+    uvicorn.run("server:app", host="0.0.0.0", port=port, reload=True)
+
 

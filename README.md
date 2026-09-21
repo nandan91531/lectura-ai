@@ -119,15 +119,15 @@ MISTRAL_API_KEY=your_mistral_api_key_here
 
 ## 💻 Running the Application
 
-### Option A: Streamlit UI (Recommended for local desktop use)
+### Option A: Running via Python Direct Execution
 ```bash
-streamlit run app.py
+python server.py
 ```
-Open your browser at **`http://localhost:8501`**.
+Open your browser at **`http://localhost:8000`** to view the Web UI.
 
-### Option B: FastAPI Backend + Web UI
+### Option B: Running via Uvicorn CLI
 ```bash
-uvicorn server.py:app --reload --port 8000
+uvicorn server:app --reload --port 8000
 ```
 Open your browser at **`http://localhost:8000`** to view the frontend, or visit **`http://localhost:8000/docs`** for interactive Swagger API documentation.
 

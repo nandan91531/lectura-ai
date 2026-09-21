@@ -1,412 +1,772 @@
 [
     {
         "start": 0.0,
-        "end": 3.48,
-        "text": "Let's talk about data science and some of the other related terms you may have heard,"
+        "end": 6.2,
+        "text": "If you want to become an AI engineer, well, you might not need a computer science degree,"
     },
     {
-        "start": 3.48,
-        "end": 8.64,
-        "text": "such as predictive analytics, machine learning, advanced analytics, and others."
+        "start": 6.2,
+        "end": 10.56,
+        "text": "but what you do need are the right skills and to understand the fundamentals."
     },
     {
-        "start": 8.64,
-        "end": 11.96,
-        "text": "So let's start with the textbook definition of data science."
+        "start": 10.56,
+        "end": 16.6,
+        "text": "And today, I'm going to break down what an AI engineer actually is, the skill stack that"
     },
     {
-        "start": 11.96,
-        "end": 21.36,
-        "text": "So data science is the field of study that involves extracting knowledge and"
+        "start": 16.6,
+        "end": 22.68,
+        "text": "you need to learn, and three projects that will help demonstrate your skills to potential"
     },
     {
-        "start": 21.36,
+        "start": 22.68,
+        "end": 23.68,
+        "text": "employers."
+    },
+    {
+        "start": 23.68,
+        "end": 28.0,
+        "text": "And a few years ago, the path in a tech was pretty straightforward, right?"
+    },
+    {
+        "start": 28.0,
+        "end": 33.84,
+        "text": "You would get a degree, go do some internships, grind coding challenges, and hope for a call"
+    },
+    {
+        "start": 33.84,
+        "end": 36.0,
+        "text": "back from the job employer, right?"
+    },
+    {
+        "start": 36.0,
         "end": 38.4,
-        "text": "insights from noisy data and then turning those insights into actions that our business"
+        "text": "But things have changed recently."
     },
     {
         "start": 38.4,
-        "end": 40.28,
-        "text": "or organization can take."
+        "end": 44.2,
+        "text": "AI coding tools have made it easy to generate code, which means the code itself isn't the"
     },
     {
-        "start": 40.28,
-        "end": 45.92,
-        "text": "Okay, so let's dig into it a little bit more and discuss what are the different areas that"
+        "start": 44.2,
+        "end": 47.88,
+        "text": "hard part anymore, but the hard part is judgment."
     },
     {
-        "start": 45.92,
-        "end": 48.04,
-        "text": "are covered by data science."
+        "start": 47.88,
+        "end": 56.4,
+        "text": "So being able to make the right decisions for situations like how to structure applications,"
     },
     {
-        "start": 48.04,
-        "end": 53.24,
-        "text": "So really data science is the intersection between three different disciplines."
+        "start": 56.4,
+        "end": 62.64,
+        "text": "knowing what to build, and specifically why one approach would be another."
     },
     {
-        "start": 53.24,
-        "end": 67.16,
-        "text": "We start with computer science, but then we also cover the area of mathematics and then"
+        "start": 62.64,
+        "end": 67.64,
+        "text": "And that's something that a class can't always teach you, but you can definitely learn by"
     },
     {
-        "start": 67.16,
-        "end": 77.6,
-        "text": "what I think is the most important is business expertise."
+        "start": 67.64,
+        "end": 68.72,
+        "text": "building."
     },
     {
-        "start": 77.6,
-        "end": 83.48,
-        "text": "So the intersection of these three disciplines is data science and true data science initiatives"
+        "start": 68.72,
+        "end": 74.24,
+        "text": "So the question is, what do you actually need to learn to become an AI engineer, and how"
     },
     {
-        "start": 83.48,
-        "end": 88.0,
-        "text": "involve collaboration across all these three different areas."
+        "start": 74.24,
+        "end": 76.8,
+        "text": "can you demonstrate that to employers?"
     },
     {
-        "start": 88.0,
-        "end": 93.84,
-        "text": "Okay, so now let's touch on the different types of data science that you can do."
+        "start": 76.8,
+        "end": 79.12,
+        "text": "First off, the term is quite new."
     },
     {
-        "start": 93.84,
-        "end": 98.96,
-        "text": "Now what we need to understand here is that we have different data science methods for"
+        "start": 79.12,
+        "end": 83.44,
+        "text": "An AI engineer is not a machine learning researcher."
     },
     {
-        "start": 98.96,
-        "end": 102.64,
-        "text": "different questions that we might ask in an organization."
+        "start": 83.44,
+        "end": 87.76,
+        "text": "It's a researcher who trains foundational models from scratch."
     },
     {
-        "start": 102.64,
-        "end": 107.8,
-        "text": "And these questions can vary by complexity and the value that we get out of them."
+        "start": 87.76,
+        "end": 93.16,
+        "text": "They publish papers about those models and the new architectures that they're working"
     },
     {
-        "start": 107.8,
-        "end": 118.76,
-        "text": "So let's chart them here by complexity and value."
+        "start": 93.16,
+        "end": 94.36,
+        "text": "on."
     },
     {
-        "start": 118.76,
-        "end": 129.24,
-        "text": "Okay, so the first one that we have here is descriptive analytics."
+        "start": 94.36,
+        "end": 100.44,
+        "text": "And this position typically requires deep math and usually an advanced degree."
     },
     {
-        "start": 129.24,
-        "end": 133.12,
-        "text": "So this is really about what is happening in my business, right?"
+        "start": 100.44,
+        "end": 104.6,
+        "text": "On the other hand, an AI engineer is different."
     },
     {
-        "start": 133.12,
-        "end": 137.0,
-        "text": "And it involves having accurate data collection to make sure that we know what's happening."
+        "start": 104.6,
+        "end": 107.96,
+        "text": "You're building with models that already exist."
     },
     {
-        "start": 137.0,
-        "end": 142.96,
-        "text": "So a good question we could ask here is, well, did sales go up or down?"
+        "start": 107.96,
+        "end": 112.84,
+        "text": "And for example, those could be the models like Frontier or open source that have been"
     },
     {
-        "start": 142.96,
-        "end": 152.0,
-        "text": "The next level is diagnostic analytics."
+        "start": 112.84,
+        "end": 118.3,
+        "text": "developed by those researchers, but you take that model and wire it into a system that"
     },
     {
-        "start": 152.0,
-        "end": 154.68,
-        "text": "And this is more about why did something happen?"
+        "start": 118.3,
+        "end": 120.04,
+        "text": "does useful work."
     },
     {
-        "start": 154.68,
-        "end": 157.04,
-        "text": "So why did sales go up or down?"
+        "start": 120.04,
+        "end": 123.28,
+        "text": "So for example, that means connecting a model to data."
     },
     {
-        "start": 157.04,
-        "end": 161.84,
-        "text": "And it involves drilling down to the root cause of our problem."
+        "start": 123.28,
+        "end": 130.0,
+        "text": "That means perhaps giving it access to tools and outside external information, giving it"
     },
     {
-        "start": 161.84,
-        "end": 170.68,
-        "text": "Now the next one that we have is predictive analytics."
+        "start": 130.0,
+        "end": 137.48,
+        "text": "memory loops and guard rails, and many other capabilities that can turn a model into a solution"
     },
     {
-        "start": 170.68,
-        "end": 174.4,
-        "text": "So this is about what is likely to happen next, right?"
+        "start": 137.48,
+        "end": 139.4,
+        "text": "that someone can actually use."
     },
     {
-        "start": 174.4,
-        "end": 178.4,
-        "text": "So what will our sales performance be next quarter?"
+        "start": 139.4,
+        "end": 145.32,
+        "text": "So if ML researchers are the ones building the engine, then AI engineers are the ones"
     },
     {
-        "start": 178.4,
-        "end": 185.64,
-        "text": "And it involves using historical patterns in our data to predict outcomes in the future."
+        "start": 145.32,
+        "end": 146.6,
+        "text": "building the car."
     },
     {
-        "start": 185.64,
-        "end": 194.96,
-        "text": "And then finally, we have prescriptive analytics."
+        "start": 146.6,
+        "end": 151.8,
+        "text": "And right now, with the influx of models, we desperately need more folks who can build"
     },
     {
-        "start": 194.96,
-        "end": 197.32,
-        "text": "So this is about what do I need to do next?"
+        "start": 151.8,
+        "end": 155.28,
+        "text": "these cars and AI solutions for organizations."
     },
     {
-        "start": 197.32,
-        "end": 201.2,
-        "text": "What is the recommended best action for a particular outcome?"
+        "start": 155.28,
+        "end": 159.88,
+        "text": "Now with the foundations, though, I typically think of this as three tiers."
     },
     {
-        "start": 201.2,
-        "end": 207.36,
-        "text": "So a question we could ask here is, what do I need to do to improve sales by 10%, right?"
+        "start": 159.88,
+        "end": 161.52,
+        "text": "And this order really matters."
     },
     {
-        "start": 207.36,
-        "end": 213.44,
-        "text": "Okay, so now we can talk about how data science is done and who actually does it."
+        "start": 161.52,
+        "end": 163.28,
+        "text": "I'll explain why."
     },
     {
-        "start": 213.44,
-        "end": 217.32,
-        "text": "So let's look at the data science life cycle."
+        "start": 163.28,
+        "end": 170.32,
+        "text": "Because with this foundation at the bottom, what people sometimes do is they skip the"
     },
     {
-        "start": 217.32,
-        "end": 230.0,
-        "text": "And the first thing that we always must start with is business understanding."
+        "start": 170.32,
+        "end": 175.72,
+        "text": "foundation here and they go straight into building agents or deploying them before they"
     },
     {
-        "start": 230.0,
-        "end": 234.56,
-        "text": "So this is really critical to make sure that we're asking the right question before we"
+        "start": 175.72,
+        "end": 180.04,
+        "text": "can handle data and understand the intricacies of infrastructure."
     },
     {
-        "start": 234.56,
-        "end": 238.72,
-        "text": "go down a lengthy data science initiative."
+        "start": 180.04,
+        "end": 183.6,
+        "text": "So they spend a lot of time relearning the basics."
     },
     {
-        "start": 238.72,
-        "end": 243.6,
-        "text": "And this is where you can see that having the business expertise and the domain expertise"
+        "start": 183.6,
+        "end": 185.68,
+        "text": "So tier one is your foundations."
     },
     {
-        "start": 243.6,
-        "end": 247.32,
-        "text": "can be incredibly critical to make sure that we're asking the right questions."
+        "start": 185.68,
+        "end": 190.32,
+        "text": "This is the stuff that's not specific to AI, but you absolutely can't build without it."
     },
     {
-        "start": 247.32,
-        "end": 257.24,
-        "text": "Okay, so once we've defined that, we can move on to data mining."
+        "start": 190.32,
+        "end": 193.44,
+        "text": "For example, using Python."
     },
     {
-        "start": 257.24,
-        "end": 262.28,
-        "text": "So this is the process of actually going out into our data landscape and procuring the"
+        "start": 193.44,
+        "end": 197.88,
+        "text": "So Python, you don't have to be a wizard, but you just have to be fluent enough to read"
     },
     {
-        "start": 262.28,
-        "end": 264.56,
-        "text": "data that we need for our analysis."
+        "start": 197.88,
+        "end": 201.96,
+        "text": "code and understand what your AI agent is writing."
     },
     {
-        "start": 264.56,
-        "end": 274.36,
-        "text": "So once we've done that, we can move on to data cleaning."
+        "start": 201.96,
+        "end": 207.56,
+        "text": "Because a lot of machine learning libraries and AI packages will be using Python underneath"
     },
     {
-        "start": 274.36,
-        "end": 281.2,
-        "text": "So the reality of the marketplace is that once we, when we find data, it's probably"
+        "start": 207.56,
+        "end": 210.68,
+        "text": "the hood, for example, PyTorch and TensorFlow."
     },
     {
-        "start": 281.2,
-        "end": 287.24,
-        "text": "not in the best format that we need it in and it probably has some issues with it, right?"
+        "start": 210.68,
+        "end": 214.52,
+        "text": "So being able to understand it as a language is quite important."
     },
     {
-        "start": 287.24,
-        "end": 292.12,
-        "text": "It might have rows that have missing values, it might have duplicates in it."
+        "start": 214.52,
+        "end": 218.36,
+        "text": "Now on the other hand, since you're going to be working and building out projects and"
     },
     {
-        "start": 292.12,
-        "end": 297.04,
-        "text": "So there's some preparation and cleaning that we have to do before it's ready for our analysis."
+        "start": 218.36,
+        "end": 223.4,
+        "text": "directories and you need to share that with others, understanding Git as a tool is really"
     },
     {
-        "start": 297.04,
-        "end": 306.12,
-        "text": "So once we've done that cleansing, we can move on to exploration."
+        "start": 223.4,
+        "end": 224.48,
+        "text": "important."
     },
     {
-        "start": 306.12,
-        "end": 314.32,
-        "text": "Okay, so this is the part of the process that allows us to use different analytical tools"
+        "start": 224.48,
+        "end": 230.52,
+        "text": "And being able to work with command line utilities or CLIs as well is quite important."
     },
     {
-        "start": 314.32,
-        "end": 320.64,
-        "text": "that can start helping us answer some of the types of questions that I mentioned here earlier."
+        "start": 230.52,
+        "end": 234.92,
+        "text": "And you'll notice that with a lot of these AI tools, they're all using Linux underneath"
     },
     {
-        "start": 320.64,
-        "end": 324.68,
-        "text": "And if we actually want to get into some of these higher value questions like predictive"
+        "start": 234.92,
+        "end": 235.92,
+        "text": "the hood."
     },
     {
-        "start": 324.68,
-        "end": 330.84,
-        "text": "and prescriptive, then we must start using advanced analytical tools such as machine"
+        "start": 235.92,
+        "end": 240.96,
+        "text": "So the combination of these three from Git to CLIs to Linux is quite important to be able"
     },
     {
-        "start": 330.84,
-        "end": 336.12,
-        "text": "learning tools that leverage massive amounts of computing power and massive amounts of"
+        "start": 240.96,
+        "end": 245.88,
+        "text": "to use the operating system where your AI agents will be deployed."
     },
     {
-        "start": 336.12,
-        "end": 343.4,
-        "text": "high quality data to make predictions and prescribe actions for the future."
+        "start": 245.88,
+        "end": 252.52,
+        "text": "And finally, we have the ability to understand APIs or application programming interfaces."
     },
     {
-        "start": 343.4,
-        "end": 350.32,
-        "text": "Now once we've done our exploration and perhaps our advanced analytics, what do we do next?"
+        "start": 252.52,
+        "end": 257.48,
+        "text": "And this is how you connect two different pieces of software to each other, right?"
     },
     {
-        "start": 350.52,
-        "end": 359.0,
-        "text": "Well, we need to visualize our insights and outcomes of our analysis."
+        "start": 257.48,
+        "end": 261.6,
+        "text": "And understanding how they work is going to be really crucial for a lot of use cases with"
     },
     {
-        "start": 359.0,
-        "end": 364.64,
-        "text": "Okay, now I want to quickly touch on who does what in this life cycle."
+        "start": 261.6,
+        "end": 265.84,
+        "text": "AI because you're going to be making calls to models programmatically."
     },
     {
-        "start": 364.64,
-        "end": 373.92,
-        "text": "So in an organization, you may have roles like a business analyst, you might have data engineers,"
+        "start": 265.84,
+        "end": 270.44,
+        "text": "You're going to be handling the responses, dealing with rate limits and much more."
     },
     {
-        "start": 373.92,
-        "end": 378.52,
-        "text": "and then you might have data scientists."
+        "start": 270.44,
+        "end": 276.68,
+        "text": "So every AI product and solution you'll eventually build is fundamentally a well-structured"
     },
     {
-        "start": 378.52,
+        "start": 276.68,
+        "end": 282.08,
+        "text": "API calls from your application to the model to different tools and services and back and"
+    },
+    {
+        "start": 282.08,
+        "end": 283.08,
+        "text": "forth."
+    },
+    {
+        "start": 283.08,
+        "end": 285.12,
+        "text": "So this is the foundation."
+    },
+    {
+        "start": 285.12,
+        "end": 288.8,
+        "text": "So tier two is where we learn about these specific AI engineering skills."
+    },
+    {
+        "start": 288.8,
+        "end": 294.84,
+        "text": "For example, understanding what embeddings are for our data sources and being able to"
+    },
+    {
+        "start": 294.84,
+        "end": 297.4,
+        "text": "do vector search."
+    },
+    {
+        "start": 297.4,
+        "end": 301.76,
+        "text": "And the reason why you need to know about this is because this allows us to provide grounded"
+    },
+    {
+        "start": 301.76,
+        "end": 307.72,
+        "text": "information into the context window of an LLM in order to get accurate responses back."
+    },
+    {
+        "start": 307.72,
+        "end": 313.52,
+        "text": "And with embeddings, what we can do is we can help this machine system understand meaning"
+    },
+    {
+        "start": 313.52,
+        "end": 315.96,
+        "text": "instead of just matching keywords."
+    },
+    {
+        "start": 315.96,
+        "end": 321.28,
+        "text": "So what we do is we convert text from types of formats like PDFs and other data formats"
+    },
+    {
+        "start": 321.28,
+        "end": 323.48,
+        "text": "to numerical vectors."
+    },
+    {
+        "start": 323.48,
+        "end": 325.6,
+        "text": "And we search them by similarity."
+    },
+    {
+        "start": 325.6,
+        "end": 332.92,
+        "text": "So for example, how similar that the word Kubernetes is to words like containers and orchestration."
+    },
+    {
+        "start": 332.92,
+        "end": 338.36,
+        "text": "So in this three space, we can get relevant results back for different types of topics"
+    },
+    {
+        "start": 338.36,
+        "end": 339.88,
+        "text": "that we want to search on."
+    },
+    {
+        "start": 339.88,
+        "end": 344.84,
+        "text": "And the reason why this is important is because of retrieval, augmented generation or"
+    },
+    {
+        "start": 344.84,
+        "end": 346.24,
+        "text": "RAG."
+    },
+    {
+        "start": 346.24,
+        "end": 352.8,
+        "text": "RAG allows us to give a model accurate results back for specific information that might be"
+    },
+    {
+        "start": 352.8,
+        "end": 358.08,
+        "text": "company policies or legal documents instead of just hallucinating them because it wasn't"
+    },
+    {
+        "start": 358.08,
+        "end": 359.92,
+        "text": "trained on that information."
+    },
+    {
+        "start": 359.92,
+        "end": 363.68,
+        "text": "So the way that it typically works is in a pipeline."
+    },
+    {
+        "start": 363.68,
+        "end": 365.52,
+        "text": "Documents come into the pipeline."
+    },
+    {
+        "start": 365.52,
+        "end": 370.84,
+        "text": "They get chunked in fixed sizes that will fit in whatever data source we'll be using."
+    },
+    {
+        "start": 370.84,
+        "end": 376.8,
+        "text": "They're embedded into those vectors or numerical representations to be searched and stored"
+    },
+    {
+        "start": 376.8,
+        "end": 378.4,
+        "text": "in that database."
+    },
+    {
+        "start": 378.4,
         "end": 384.0,
-        "text": "So business analysts are obviously involved in formulating the questions."
+        "text": "Now at the same time, when someone's asking a question about specific company data or"
     },
     {
         "start": 384.0,
-        "end": 388.16,
-        "text": "They have the domain expertise, they can help with the business understanding."
+        "end": 390.36,
+        "text": "personal information, what we do is we take that question and we add in relevant retrieved"
     },
     {
-        "start": 388.16,
-        "end": 393.88,
-        "text": "But they're also involved with visualizing our insights in a way that's useful for the"
+        "start": 390.36,
+        "end": 397.12,
+        "text": "information from that database or vector source and feed that both the relevant information"
     },
     {
-        "start": 393.88,
-        "end": 395.88,
-        "text": "business, right?"
+        "start": 397.12,
+        "end": 402.56,
+        "text": "and the question into the context window of our large language model."
     },
     {
-        "start": 395.88,
-        "end": 398.16,
-        "text": "And then we have folks like data engineering folks."
+        "start": 402.56,
+        "end": 407.88,
+        "text": "Then we get that result back which has been grounded in that factual information but"
     },
     {
-        "start": 398.16,
-        "end": 405.16,
-        "text": "So these are the people that can help us find the data, clean the data, and then also help"
+        "start": 407.88,
+        "end": 410.12,
+        "text": "also in natural language for us."
     },
     {
-        "start": 405.16,
-        "end": 408.28,
-        "text": "with some of the exploration."
+        "start": 410.12,
+        "end": 415.96,
+        "text": "And almost every company experimenting with AI wants some version of RAG or retrieval, augmented"
     },
     {
-        "start": 408.28,
-        "end": 410.88,
-        "text": "Next we move on to our data scientists."
-    },
-    {
-        "start": 410.88,
-        "end": 415.08,
-        "text": "So these are the people that will really help us with the exploration, they'll help us with"
-    },
-    {
-        "start": 415.08,
+        "start": 415.96,
         "end": 421.92,
-        "text": "the advanced machine learning techniques, and they'll also assist in the visualization."
+        "text": "generation, even if you're not using embeddings or working with another form of storage."
     },
     {
         "start": 421.92,
-        "end": 427.4,
-        "text": "So you can see there's some overlap between the roles, and that's why it's critical to"
+        "end": 424.84,
+        "text": "Now third is agents and tool use."
     },
     {
-        "start": 427.4,
-        "end": 432.12,
-        "text": "have collaboration across these roles."
+        "start": 424.84,
+        "end": 430.0,
+        "text": "You've probably heard a lot about this if you're watching our channel because this is what's"
     },
     {
-        "start": 432.12,
-        "end": 436.52,
-        "text": "And what you also start seeing nowadays in the marketplace is that sometimes business"
+        "start": 430.0,
+        "end": 436.56,
+        "text": "so popular right now because agents allow us to go from answering questions to actually"
     },
     {
-        "start": 436.6,
-        "end": 440.44,
-        "text": "analysts have to do some machine learning, they have to help out with exploration."
+        "start": 436.56,
+        "end": 438.32,
+        "text": "doing things."
     },
     {
-        "start": 440.44,
-        "end": 444.36,
-        "text": "Data scientists sometimes need to go and find the data on their own."
+        "start": 438.32,
+        "end": 444.4,
+        "text": "And again, this is probably the most in demand applied AI skill right now and a quick distinction."
     },
     {
-        "start": 444.36,
-        "end": 450.88,
-        "text": "So there's a lot of overlap and these different roles must collaborate with each other."
+        "start": 444.4,
+        "end": 451.36,
+        "text": "A workflow typically follows a predefined path so you have step A, step B and step C because"
     },
     {
-        "start": 450.88,
-        "end": 456.96,
-        "text": "Okay, so I hope you can see now how the data science lifecycle can help us take noisy data,"
+        "start": 451.36,
+        "end": 453.28,
+        "text": "of different actions that are happening."
     },
     {
-        "start": 456.96,
-        "end": 462.08,
-        "text": "turn it into knowledge and insights, and then turn it into meaningful action for our business."
+        "start": 453.28,
+        "end": 455.12,
+        "text": "But with an agent, it's a little bit different."
     },
     {
-        "start": 462.08,
-        "end": 463.36,
-        "text": "Thank you."
+        "start": 455.12,
+        "end": 460.64,
+        "text": "An agent can dynamically decide what to do next so it can call tools that it needs to use."
     },
     {
-        "start": 463.36,
-        "end": 466.04,
-        "text": "If you have questions, please drop us a line below."
+        "start": 460.64,
+        "end": 466.88,
+        "text": "It can observe those results and based on that go in a loop and make those decisions and"
     },
     {
-        "start": 466.04,
-        "end": 469.68,
-        "text": "And if you want to see more videos like this in the future, please like and subscribe."
+        "start": 466.88,
+        "end": 471.92,
+        "text": "building these loops is what's really important because one who can do this reliably and at"
+    },
+    {
+        "start": 471.92,
+        "end": 474.68,
+        "text": "scale, well that's a good AI engineer."
+    },
+    {
+        "start": 474.68,
+        "end": 479.08,
+        "text": "And finally tier three which is getting things shipped and deployed because to create real"
+    },
+    {
+        "start": 479.08,
+        "end": 484.04,
+        "text": "value things need to get off of our laptop and into the hands of real users."
+    },
+    {
+        "start": 484.04,
+        "end": 487.12,
+        "text": "And that means understanding deployment and basic operations."
+    },
+    {
+        "start": 487.12,
+        "end": 488.92,
+        "text": "So what skills you need?"
+    },
+    {
+        "start": 488.92,
+        "end": 491.72,
+        "text": "Well first off is containerization."
+    },
+    {
+        "start": 491.72,
+        "end": 497.56,
+        "text": "You need to be able to containerize or package up your AI agent and even the model two sometimes"
+    },
+    {
+        "start": 497.56,
+        "end": 502.4,
+        "text": "to be able to deploy this to different environments across the hybrid cloud."
+    },
+    {
+        "start": 502.4,
+        "end": 505.72,
+        "text": "So containerization and Kubernetes are really important."
+    },
+    {
+        "start": 505.72,
+        "end": 508.12,
+        "text": "Second is observability."
+    },
+    {
+        "start": 508.12,
+        "end": 514.36,
+        "text": "So when a model calls being made and that agent maybe is using different databases and going"
+    },
+    {
+        "start": 514.36,
+        "end": 520.48,
+        "text": "back and forth to collect data, we need to understand why the agent made that final decision."
+    },
+    {
+        "start": 520.48,
+        "end": 526.64,
+        "text": "And being able to observe all of those different functions is really important to transparency"
+    },
+    {
+        "start": 526.64,
+        "end": 529.28,
+        "text": "and trust behind AI."
+    },
+    {
+        "start": 529.28,
+        "end": 535.8,
+        "text": "Next is monitoring, making sure that you're not spending too much on your token bills and"
+    },
+    {
+        "start": 536.04,
+        "end": 542.0,
+        "text": "everything is kept safe, especially from a security standpoint and much, much more in the realm"
+    },
+    {
+        "start": 542.0,
+        "end": 543.48,
+        "text": "of deployment."
+    },
+    {
+        "start": 543.48,
+        "end": 549.2,
+        "text": "Now thankfully these AI DevTools can make you dramatically faster in this area too, whether"
+    },
+    {
+        "start": 549.2,
+        "end": 552.76,
+        "text": "you're deploying your application on something like bare metal."
+    },
+    {
+        "start": 552.76,
+        "end": 559.88,
+        "text": "So totally disconnected from the real world or maybe in cloud via some type of hosted service"
+    },
+    {
+        "start": 559.88,
+        "end": 562.84,
+        "text": "where you're deploying it across the world."
+    },
+    {
+        "start": 562.84,
+        "end": 568.24,
+        "text": "Now with these top two tiers, what I see in most use cases for AI and production right"
+    },
+    {
+        "start": 568.24,
+        "end": 575.32,
+        "text": "now is one rag so knowledge systems that are powering HR services, hospitals, online"
+    },
+    {
+        "start": 575.32,
+        "end": 581.52,
+        "text": "chatbots, allowing users to be able to ask questions to their businesses that they use"
+    },
+    {
+        "start": 581.52,
+        "end": 587.52,
+        "text": "or within organizations and get back that grounded data from those searches."
+    },
+    {
+        "start": 587.52,
+        "end": 593.92,
+        "text": "The second off is with agents and tools being able to use an agent that can query a database,"
+    },
+    {
+        "start": 593.92,
+        "end": 599.32,
+        "text": "visualize data and be able to do things that typically a subject matter expert only could."
+    },
+    {
+        "start": 600.0,
+        "end": 604.0,
+        "text": "And then finally is helping with deployed applications."
+    },
+    {
+        "start": 604.0,
+        "end": 607.48,
+        "text": "So helping engineers get their code shipped in hours"
+    },
+    {
+        "start": 607.48,
+        "end": 609.72,
+        "text": "and not weeks using these AI tools."
+    },
+    {
+        "start": 609.72,
+        "end": 612.28,
+        "text": "Those are three of the most common use cases"
+    },
+    {
+        "start": 612.28,
+        "end": 614.68,
+        "text": "that I see with AI right now."
+    },
+    {
+        "start": 614.68,
+        "end": 618.0,
+        "text": "And I encourage you to build in those specific areas"
+    },
+    {
+        "start": 618.0,
+        "end": 619.84,
+        "text": "with your own personal interest"
+    },
+    {
+        "start": 619.84,
+        "end": 621.8,
+        "text": "because that'll be huge for your career"
+    },
+    {
+        "start": 621.8,
+        "end": 624.44,
+        "text": "and experience in AI engineering."
+    },
+    {
+        "start": 624.44,
+        "end": 627.52,
+        "text": "But now you know what AI engineers do, right?"
+    },
+    {
+        "start": 627.52,
+        "end": 630.68,
+        "text": "They build systems around language models"
+    },
+    {
+        "start": 630.68,
+        "end": 633.24,
+        "text": "using these three tiers of skills."
+    },
+    {
+        "start": 633.24,
+        "end": 635.6,
+        "text": "And you can start building today too."
+    },
+    {
+        "start": 635.6,
+        "end": 637.6,
+        "text": "So thanks so much for watching."
+    },
+    {
+        "start": 637.6,
+        "end": 640.36,
+        "text": "If you enjoyed the video, please be sure to leave a like"
+    },
+    {
+        "start": 640.36,
+        "end": 642.04,
+        "text": "and we'll catch you in the next one."
+    },
+    {
+        "start": 642.04,
+        "end": 642.88,
+        "text": "Bye."
     }
 ]
